@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Consultation - Suchit Ligade | Professional Portfolio</title>
+    
+    <!-- DotLife Theme Inspired Styles -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Jost', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.7;
+            color: #222222;
+            background-color: #f9f9f9;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Jost', sans-serif;
+            font-weight: 700;
+            line-height: 1.7;
+            color: #222222;
+        }
+        
+        h1 { font-size: 34px; }
+        h2 { font-size: 30px; }
+        h3 { font-size: 26px; }
+        h4 { font-size: 24px; }
+        h5 { font-size: 22px; }
+        h6 { font-size: 20px; }
+        
+        a {
+            color: #222222;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: #0067DA;
+        }
+        
+        /* Header */
+        .header_wrapper {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 20px 0;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .header_content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a202c;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .logo img {
+            width: 220px;
+            height: 220px;
+            object-fit: contain;
+            position: absolute;
+            top: -100px;
+            left: -200px;
+            z-index: 10;
+        }
+        
+        .nav_menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav_menu li a {
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 25px;
+            position: relative;
+        }
+        
+        .nav_menu li a.active {
+            color: #ffffff;
+            background: linear-gradient(135deg, #0067DA 0%, #0052b3 100%);
+            box-shadow: 0 4px 15px rgba(0, 103, 218, 0.3);
+        }
+        
+        .nav_menu li a:hover:not(.active) {
+            background: rgba(0, 103, 218, 0.1);
+            color: #0067DA;
+        }
+        
+        /* Mobile Menu Toggle */
+        .mobile_menu_toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+        }
+        
+        .mobile_menu_toggle span {
+            width: 25px;
+            height: 3px;
+            background: #1a202c;
+            margin: 3px 0;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+        
+        .mobile_menu_toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        
+        .mobile_menu_toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .mobile_menu_toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+        
+        /* Mobile Menu Overlay */
+        .mobile_menu {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile_menu.active {
+            left: 0;
+        }
+        
+        .mobile_menu ul {
+            list-style: none;
+            text-align: center;
+        }
+        
+        .mobile_menu ul li {
+            margin: 30px 0;
+        }
+        
+        .mobile_menu ul li a {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile_menu ul li a:hover,
+        .mobile_menu ul li a.active {
+            color: #60a5fa;
+            transform: scale(1.1);
+        }
+        
+        /* Main Content */
+        .main_content {
+            padding: 120px 0 80px;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            min-height: 100vh;
+        }
+        
+        .page_title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 80px;
+            font-weight: 700;
+            color: #1a202c;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease-out 0.3s forwards;
+        }
+        
+        /* Packages Section */
+        .packages_section {
+            margin-bottom: 80px;
+        }
+        
+        .packages_grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .package_item {
+            background: #ffffff;
+            border: 2px solid #e2e8f0;
+            border-radius: 25px;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .package_item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .package_item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            border-color: rgba(0, 103, 218, 0.3);
+        }
+        
+        .package_item.popular {
+            border-color: #0067DA;
+            transform: scale(1.05);
+        }
+        
+        .package_item.popular::before {
+            content: "Most Popular";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #0067DA;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        .package_title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .package_description {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* Calendar Section */
+        .calendar_section {
+            text-align: center;
+            margin-bottom: 60px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .calendar_section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .calendar {
+            background: #ffffff;
+            border: 2px solid #0067DA;
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 450px;
+            margin: 0 auto 40px;
+            box-shadow: 0 15px 40px rgba(0,103,218,0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .calendar:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 60px rgba(0,103,218,0.2);
+        }
+        
+        .calendar_header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 0 10px;
+        }
+        
+        .calendar_nav {
+            background: none;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .calendar_nav:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .calendar_month {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .calendar_grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            text-align: center;
+        }
+        
+        .calendar_day_header {
+            padding: 10px 5px;
+            font-weight: 600;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .calendar_day {
+            padding: 10px 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .calendar_day:hover {
+            background-color: #e6f3ff;
+        }
+        
+        .calendar_day.selected {
+            background-color: #0067DA;
+            color: white;
+        }
+        
+        .calendar_day.other_month {
+            color: #ccc;
+        }
+        
+        /* Schedule Button */
+        .schedule_button {
+            margin-top: 20px;
+        }
+        
+        .button {
+            font-family: 'Jost', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 50px;
+            padding: 18px 40px;
+            display: inline-block;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            border: 2px solid #0067DA;
+            background: linear-gradient(135deg, #0067DA 0%, #0052b3 100%);
+            color: #ffffff;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s ease;
+            z-index: -1;
+        }
+        
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0, 103, 218, 0.4);
+            background: linear-gradient(135deg, #0052b3 0%, #003d82 100%);
+        }
+        
+        .button:hover::before {
+            left: 100%;
+        }
+        
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .packages_grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .package_item.popular {
+                transform: none;
+            }
+            
+            .nav_menu {
+                display: none;
+            }
+            
+            .mobile_menu_toggle {
+                display: flex;
+            }
+            
+            .page_title {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header_wrapper">
+        <div class="container">
+            <div class="header_content">
+                <div class="logo">
+                        <a href="index.html" style="display: flex; align-items: center; gap: 0px; padding-left: 0px;">
+                        <img src="revel-logo.gif" alt="Revel Mentorship Logo">
+                        Revel Mentorship
+                    </a>
+                </div>
+                <nav>
+                    <ul class="nav_menu">
+                        <li><a href="about.html">About Me / Projects</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html" class="active">Book Consultation</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile_menu_toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="main_content">
+        <div class="container">
+            <h1 class="page_title">Book Consultation</h1>
+            
+            <!-- Packages Section -->
+            <div class="packages_section">
+                <div class="packages_grid">
+                    <div class="package_item">
+                        <h3 class="package_title">Basic Package</h3>
+                        <p class="package_description">Perfect for getting started with your product management journey. Includes initial consultation and guidance.</p>
+                    </div>
+                    
+                    <div class="package_item popular">
+                        <h3 class="package_title">Most Popular</h3>
+                        <p class="package_description">Our most comprehensive package including ongoing mentorship, strategic guidance, and career planning support.</p>
+                    </div>
+                    
+                    <div class="package_item">
+                        <h3 class="package_title">Professional</h3>
+                        <p class="package_description">Advanced coaching for experienced professionals looking to transition or advance in product management roles.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calendar Section -->
+            <div class="calendar_section">
+                <div class="calendar">
+                    <div class="calendar_header">
+                        <button class="calendar_nav" onclick="changeMonth(-1)">◀</button>
+                        <div class="calendar_month" id="currentMonth">SEPTEMBER 2025</div>
+                        <button class="calendar_nav" onclick="changeMonth(1)">▶</button>
+                    </div>
+                    
+                    <div class="calendar_grid">
+                        <div class="calendar_day_header">S</div>
+                        <div class="calendar_day_header">M</div>
+                        <div class="calendar_day_header">T</div>
+                        <div class="calendar_day_header">W</div>
+                        <div class="calendar_day_header">T</div>
+                        <div class="calendar_day_header">F</div>
+                        <div class="calendar_day_header">S</div>
+                        
+                        <div class="calendar_day other_month">31</div>
+                        <div class="calendar_day" onclick="selectDay(this)">1</div>
+                        <div class="calendar_day" onclick="selectDay(this)">2</div>
+                        <div class="calendar_day" onclick="selectDay(this)">3</div>
+                        <div class="calendar_day" onclick="selectDay(this)">4</div>
+                        <div class="calendar_day" onclick="selectDay(this)">5</div>
+                        <div class="calendar_day" onclick="selectDay(this)">6</div>
+                        
+                        <div class="calendar_day" onclick="selectDay(this)">7</div>
+                        <div class="calendar_day" onclick="selectDay(this)">8</div>
+                        <div class="calendar_day" onclick="selectDay(this)">9</div>
+                        <div class="calendar_day" onclick="selectDay(this)">10</div>
+                        <div class="calendar_day" onclick="selectDay(this)">11</div>
+                        <div class="calendar_day" onclick="selectDay(this)">12</div>
+                        <div class="calendar_day" onclick="selectDay(this)">13</div>
+                        
+                        <div class="calendar_day" onclick="selectDay(this)">14</div>
+                        <div class="calendar_day" onclick="selectDay(this)">15</div>
+                        <div class="calendar_day" onclick="selectDay(this)">16</div>
+                        <div class="calendar_day" onclick="selectDay(this)">17</div>
+                        <div class="calendar_day" onclick="selectDay(this)">18</div>
+                        <div class="calendar_day" onclick="selectDay(this)">19</div>
+                        <div class="calendar_day" onclick="selectDay(this)">20</div>
+                        
+                        <div class="calendar_day" onclick="selectDay(this)">21</div>
+                        <div class="calendar_day" onclick="selectDay(this)">22</div>
+                        <div class="calendar_day" onclick="selectDay(this)">23</div>
+                        <div class="calendar_day" onclick="selectDay(this)">24</div>
+                        <div class="calendar_day" onclick="selectDay(this)">25</div>
+                        <div class="calendar_day selected" onclick="selectDay(this)">26</div>
+                        <div class="calendar_day" onclick="selectDay(this)">27</div>
+                        
+                        <div class="calendar_day" onclick="selectDay(this)">28</div>
+                        <div class="calendar_day" onclick="selectDay(this)">29</div>
+                        <div class="calendar_day" onclick="selectDay(this)">30</div>
+                        <div class="calendar_day other_month">1</div>
+                        <div class="calendar_day other_month">2</div>
+                        <div class="calendar_day other_month">3</div>
+                        <div class="calendar_day other_month">4</div>
+                        
+                        <div class="calendar_day other_month">5</div>
+                        <div class="calendar_day other_month">6</div>
+                        <div class="calendar_day other_month">7</div>
+                        <div class="calendar_day other_month">8</div>
+                        <div class="calendar_day other_month">9</div>
+                        <div class="calendar_day other_month">10</div>
+                        <div class="calendar_day other_month">11</div>
+                    </div>
+                </div>
+                
+                <div class="schedule_button">
+                    <a href="#" class="button">Schedule a Call</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Animations -->
+    <style>
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+    <!-- JavaScript -->
+    <script>
+        // Header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header_wrapper');
+            if (window.scrollY > 50) {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+                header.style.backdropFilter = 'blur(20px)';
+            } else {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(20px)';
+            }
+        });
+
+        // Mobile menu toggle functionality
+        function initMobileMenu() {
+            const mobileToggle = document.querySelector('.mobile_menu_toggle');
+            const mobileMenu = document.querySelector('.mobile_menu');
+            
+            if (!mobileToggle || !mobileMenu) {
+                // Create mobile menu if it doesn't exist
+                const header = document.querySelector('.header_wrapper');
+                const mobileMenuHTML = `
+                    <div class="mobile_menu">
+                        <ul>
+                            <li><a href="about.html">About Me / Projects</a></li>
+                            <li><a href="testimonials.html">Testimonials</a></li>
+                            <li><a href="contact.html" class="active">Book Consultation</a></li>
+                        </ul>
+                    </div>
+                `;
+                header.insertAdjacentHTML('afterend', mobileMenuHTML);
+            }
+            
+            const toggle = document.querySelector('.mobile_menu_toggle');
+            const menu = document.querySelector('.mobile_menu');
+            
+            if (toggle && menu) {
+                toggle.addEventListener('click', function() {
+                    toggle.classList.toggle('active');
+                    menu.classList.toggle('active');
+                    document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : 'auto';
+                });
+                
+                // Close menu when clicking on links
+                const menuLinks = menu.querySelectorAll('a');
+                menuLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        toggle.classList.remove('active');
+                        menu.classList.remove('active');
+                        document.body.style.overflow = 'auto';
+                    });
+                });
+            }
+        }
+
+        // Package animations
+        function initPackageAnimations() {
+            const packageItems = document.querySelectorAll('.package_item');
+            const calendarSection = document.querySelector('.calendar_section');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        // Add staggered animation delay
+                        setTimeout(() => {
+                            entry.target.classList.add('visible');
+                        }, index * 200);
+                        
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            packageItems.forEach(item => {
+                observer.observe(item);
+            });
+            
+            if (calendarSection) {
+                observer.observe(calendarSection);
+            }
+        }
+
+        // Calendar functionality
+        function selectDay(dayElement) {
+            // Remove selected class from all days
+            document.querySelectorAll('.calendar_day').forEach(day => {
+                day.classList.remove('selected');
+            });
+            
+            // Add selected class to clicked day
+            if (!dayElement.classList.contains('other_month')) {
+                dayElement.classList.add('selected');
+            }
+        }
+
+        function changeMonth(direction) {
+            // This is a placeholder - in a real implementation you'd update the calendar
+            console.log('Change month by', direction);
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            initMobileMenu();
+            initPackageAnimations();
+        });
+    </script>
+</body>
+</html>

@@ -1,84 +1,33 @@
 <!DOCTYPE html>
-<html lang="en-US" data-menu="leftalign">
+<html lang="en">
 <head>
-    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suchit Ligade | Professional Portfolio</title>
-    <meta name="robots" content="noindex,nofollow">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="format-detection" content="telephone=no">
-    <link href="https://fonts.gstatic.com" crossorigin="anonymous" rel="preconnect">
-    <link href="https://ajax.googleapis.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com" rel="preconnect">
     
-    <!-- Original DotLife External Stylesheets -->
-    <link rel="stylesheet" href="https://dotlife.b-cdn.net/dotlife/demo/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all">
-    <link rel="stylesheet" href="https://dotlife.b-cdn.net/dotlife/demo/wp-content/cache/autoptimize/css/autoptimize_single_be75bd883bf433a20832bb02aef36865.css" type="text/css" media="all">
-    <link rel="stylesheet" href="https://dotlife.b-cdn.net/dotlife/demo/wp-content/cache/autoptimize/css/autoptimize_single_d5fd4cabb879fbaf26a264debaea75d1.css" type="text/css" media="all">
-    <link rel="stylesheet" href="https://dotlife.b-cdn.net/dotlife/demo/wp-content/cache/autoptimize/css/autoptimize_single_d00a09978610e1ef02f295f5df229efa.css" type="text/css" media="all">
-    <link rel="stylesheet" href="https://dotlife.b-cdn.net/dotlife/demo/wp-content/themes/dotlife/css/font-awesome.min.css" type="text/css" media="all">
-    
-    <!-- DotLife Custom Styles -->
+    <!-- DotLife Theme Inspired Styles -->
     <style>
-        @font-face {
-            font-family: "Jost";
-            src: url(https://dotlife.b-cdn.net/dotlife/demo/wp-content/themes/dotlife/fonts/Jost-300-Light.woff) format("woff");
-            font-weight: 300;
-            font-style: normal;
-        }
-        @font-face {
-            font-family: "Jost";
-            src: url(https://dotlife.b-cdn.net/dotlife/demo/wp-content/themes/dotlife/fonts/Jost-400-Book.woff) format("woff");
-            font-weight: 400;
-            font-style: normal;
-        }
-        @font-face {
-            font-family: "Jost";
-            src: url(https://dotlife.b-cdn.net/dotlife/demo/wp-content/themes/dotlife/fonts/Jost-500-Medium.woff) format("woff");
-            font-weight: 700;
-            font-style: normal;
-        }
-        @font-face {
-            font-family: "Jost";
-            src: url(https://dotlife.b-cdn.net/dotlife/demo/wp-content/themes/dotlife/fonts/Jost-700-Bold.woff) format("woff");
-            font-weight: 900;
-            font-style: normal;
-        }
-
-        /* Original DotLife Global Styles */
-        body, input[type=text], input[type=password], input[type=email], input[type=url], input[type=date], input[type=tel], select, textarea {
-            font-family: "Jost";
-            font-size: 16px;
-            font-weight: 400;
-            letter-spacing: 0px;
-            line-height: 1.7;
-            text-transform: none;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700;900&display=swap');
         
-        h1, h2, h3, h4, h5, h6 {
-            font-family: "Jost";
-            font-weight: 700;
-            line-height: 1.7;
-            text-transform: none;
-        }
-        
-        body, #wrapper {
-            background-color: #f9f9f9;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         
         body {
+            font-family: 'Jost', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.7;
             color: #222222;
-        }
-        
-        a {
-            color: #222222;
-        }
-        
-        a:hover, a:active {
-            color: #0067DA;
+            background-color: #f9f9f9;
         }
         
         h1, h2, h3, h4, h5, h6 {
+            font-family: 'Jost', sans-serif;
+            font-weight: 700;
+            line-height: 1.7;
             color: #222222;
         }
         
@@ -89,230 +38,1145 @@
         h5 { font-size: 22px; }
         h6 { font-size: 20px; }
         
-        /* Button Styles exactly like DotLife */
-        input[type=submit], input[type=button], a.button, .button {
-            font-family: "Jost";
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            line-height: 1.7;
-            text-transform: uppercase;
-            -webkit-border-radius: 25px;
-            -moz-border-radius: 25px;
-            border-radius: 25px;
-            background-color: #0067DA;
-            border: 2px solid #0067DA;
-            color: #ffffff;
-            display: inline-block;
-            padding: 12px 30px;
+        a {
+            color: #222222;
             text-decoration: none;
-            transition: all 0.3s ease;
-            cursor: pointer;
         }
         
-        input[type=button]:hover, input[type=submit]:hover, a.button:hover, .button:hover {
-            background-color: #ffffff;
+        a:hover {
             color: #0067DA;
-            border-color: #0067DA;
         }
         
-        .button.ghost {
+        /* Header */
+        .header_wrapper {
+            position: fixed;
+            top: 0;
+            width: 100%;
             background-color: transparent;
-            color: #ffffff;
-            border: 2px solid #ffffff;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: all 0.3s ease;
         }
         
-        .button.ghost:hover {
-            background-color: #ffffff;
-            color: #0067DA;
+        .header_wrapper.scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
         }
         
-        /* DotLife Animations */
-        @keyframes fadeInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(10%);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0%);
-            }
-        }
-        
-        .animated-fast {
-            animation: fadeInUp 0.8s ease-out;
-        }
-        
-        .elementor-animation-shrink:hover {
-            transform: scale(0.9);
-        }
-        
-        /* Wrapper and Layout */
-        #wrapper {
-            padding-top: 93px;
-            margin-bottom: 756px;
-        }
-        
-        .elementor-container {
+        .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
         
-        .elementor-row {
+        .header_content {
             display: flex;
-            flex-wrap: wrap;
-            margin: 0 -10px;
+            justify-content: space-between;
+            align-items: center;
         }
         
-        .elementor-column {
-            padding: 0 10px;
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            font-size: 24px;
+            font-weight: 700;
+            color: #ffffff;
+            transition: color 0.3s ease;
+            position: relative;
         }
         
-        .elementor-col-50 {
-            width: 50%;
+        .logo img {
+            width: 220px;
+            height: 220px;
+            object-fit: contain;
+            position: absolute;
+            top: -100px;
+            left: -200px;
+            z-index: 10;
         }
         
-        .elementor-col-25 {
-            width: 25%;
+        .header_wrapper.scrolled .logo {
+            color: #222222;
         }
         
-        .elementor-col-100 {
-            width: 100%;
+        .nav_menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
         }
         
-        /* Header exactly like DotLife */
-        .header_style_wrapper {
+        .nav_menu li a {
+            font-weight: 500;
+            transition: color 0.3s ease;
+            color: #ffffff;
+        }
+        
+        .header_wrapper.scrolled .nav_menu li a {
+            color: #222222;
+        }
+        
+        .nav_menu li a:hover {
+            color: #0067DA;
+        }
+        
+        /* Mobile Menu */
+        .mobile_menu_toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+        }
+        
+        .mobile_menu_toggle span {
+            width: 25px;
+            height: 3px;
+            background: #ffffff;
+            margin: 3px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .header_wrapper.scrolled .mobile_menu_toggle span {
+            background: #222222;
+        }
+        
+        .mobile_menu_toggle.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        
+        .mobile_menu_toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .mobile_menu_toggle.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+        
+        /* Mobile Navigation Overlay */
+        .mobile_nav_overlay {
             position: fixed;
             top: 0;
+            left: 0;
             width: 100%;
-            z-index: 1000;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 998;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
         }
         
-        .elementor-section {
-            padding: 26px 0;
-            background-color: #ffffff;
+        .mobile_nav_overlay.active {
+            opacity: 1;
+            visibility: visible;
         }
         
-        /* Hero Section like DotLife */
-        .hero-section {
-            background-image: url('Images 3/Hero section image 1.png');
-            background-size: cover;
-            background-position: center;
+        .mobile_nav {
+            position: fixed;
+            top: 0;
+            left: -350px;
+            width: 350px;
+            height: 100%;
+            background-color: #000000;
+            z-index: 999;
+            transition: left 0.3s ease;
+            overflow-y: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .mobile_nav.active {
+            left: 0;
+        }
+        
+        .mobile_nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            min-height: 50vh;
+            padding-left: 60px;
+        }
+        
+        .mobile_nav li {
+            padding: 0;
+            margin: 15px 0;
+            border-bottom: none;
+        }
+        
+        .mobile_nav a {
+            color: #ffffff;
+            font-weight: 400;
+            font-size: 24px;
+            padding: 8px 0;
+            display: block;
+            transition: all 0.3s ease;
+            border-left: none;
+            text-decoration: none;
+            font-family: 'Jost', sans-serif;
+        }
+        
+        .mobile_nav a:hover {
+            color: #cccccc;
+            background-color: transparent;
+        }
+        
+        /* Hero Section */
+        .hero_section {
             min-height: 100vh;
             display: flex;
             align-items: center;
+            justify-content: flex-start;
             position: relative;
-            color: white;
+            background-image: url('Images 3/Hero section image 1.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding-top: 100px;
+            overflow: hidden;
         }
         
-        .hero-section::before {
+        /* Light overlay for better text readability without heavy blue tint */
+        .hero_section::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 103, 218, 0.3) 100%);
+            background: rgba(0, 0, 0, 0.2);
+            z-index: 1;
         }
         
-        .hero-section .elementor-container {
-            position: relative;
-            z-index: 2;
-        }
-        
-        /* Shape Dividers like DotLife */
-        .elementor-shape-bottom svg {
-            width: 100%;
-            height: 100px;
+        .hero_content {
             position: absolute;
-            bottom: 0;
-            left: 0;
+            left: 120px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+            max-width: 600px;
+            padding-left: 0;
         }
         
-        .elementor-shape-fill {
-            fill: #f9f9f9;
+        .hero_text {
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .hero_name {
+            animation: fadeInLeft 1s ease-out 0.2s both;
+        }
+        
+        .hero_title {
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+        
+        .hero_buttons {
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+        
+        .hero_subtitle {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 20px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        
+        .hero_name {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+        
+        .hero_title {
+            font-size: 48px;
+            margin-bottom: 40px;
+            line-height: 1.2;
+            color: #ffffff;
+            font-weight: 300;
+        }
+        
+        .hero_title strong {
+            font-weight: 600;
+        }
+        
+        .hero_title .highlight {
+            color: #ffffff;
+            font-weight: 600;
+        }
+        
+        .hero_buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .button {
+            font-family: 'Jost', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 25px;
+            padding: 15px 35px;
+            display: inline-block;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            border: 2px solid #0067DA;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .button.primary {
+            background-color: #0067DA;
+            color: #ffffff;
+        }
+        
+        .button.primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .button.primary:hover {
+            background-color: rgba(0, 103, 218, 0.9);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 103, 218, 0.3);
+        }
+        
+        .button.primary:hover::before {
+            left: 100%;
+        }
+        
+        .button.secondary {
+            background-color: transparent;
+            color: #ffffff;
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .button.secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: #ffffff;
+            transform: translateY(-2px);
+        }
+        
+        /* About Section */
+        .about_section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1a1a1a 0%, #222222 50%, #2a2a2a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about_section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 103, 218, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+            z-index: 1;
+        }
+        
+        .about_section::after {
+            content: '';
+            position: absolute;
+            top: 20%;
+            right: -5%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255, 107, 53, 0.1) 0%, rgba(255, 149, 102, 0.05) 50%, transparent 70%);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .about_section .container {
+            position: relative;
+            z-index: 3;
+        }
+        
+        /* Initial states for scroll-triggered animations */
+        .about_section .section_header {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .about_section .section_subtitle {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .about_section .section_title {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .about_section .section_description {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .about_section .button {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        
+        /* Animated states */
+        .about_section.animate-in .section_header {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .about_section.animate-in .section_subtitle {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.1s;
+        }
+        
+        .about_section.animate-in .section_title {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.2s;
+        }
+        
+        .about_section.animate-in .section_description {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.3s;
+        }
+        
+        .about_section.animate-in .button {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.4s;
+        }
+        
+        .about_section .section_header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .about_section .section_subtitle {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .about_section .section_title {
+            color: #ffffff;
+        }
+        
+        .about_section .section_description {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .about_section .button.primary {
+            background-color: #0067DA;
+            color: #ffffff;
+            border-color: #0067DA;
+        }
+        
+        .about_section .button.primary:hover {
+            background-color: #ffffff;
+            color: #0067DA;
+            border-color: #ffffff;
+        }
+        
+        .section_header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section_subtitle {
+            font-size: 13px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .section_title {
+            font-size: 36px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .about_section .section_title {
+            background: linear-gradient(45deg, #ffffff, #e0e0e0, #ffffff);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: textShimmer 4s ease-in-out infinite;
+        }
+        
+        .section_description {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px;
+            color: #555;
         }
         
         /* Services Section */
-        .services-section {
+        .services_section {
             padding: 100px 0;
             background-color: #f9f9f9;
         }
         
-        .service-grid {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 0 -15px;
+        .services_grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
         }
         
-        .service-item {
-            flex: 0 0 25%;
-            padding: 0 15px;
+        .service_item {
             text-align: center;
-            margin-bottom: 40px;
+            padding: 40px 30px;
+            background: linear-gradient(135deg, #ffffff 0%, #fafbff 100%);
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0, 103, 218, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
-        .service-item img {
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-            transition: transform 0.3s ease;
-        }
-        
-        .service-item:hover img {
+        .service_item:hover {
             transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 103, 218, 0.1);
         }
         
-        /* CTA Section */
-        .cta-section {
-            background-color: #0067DA;
-            color: white;
-            padding: 100px 0;
-            text-align: center;
+        .service_icon {
+            font-size: 48px;
+            color: #0067DA;
+            margin-bottom: 20px;
+        }
+        
+        .service_item h3 {
+            margin-bottom: 15px;
+        }
+        
+        /* My Approach Section */
+        .approach_section {
+            padding: 60px 0;
+            background: linear-gradient(45deg, #ffffff 0%, #fafbff 50%, #ffffff 100%);
             position: relative;
+            overflow: hidden;
         }
         
-        /* Stats Section */
-        .stats-section {
-            background-color: #0067DA;
-            color: white;
-            padding: 80px 0;
-            position: relative;
-        }
-        
-        .stats-section::before,
-        .stats-section::after {
+        .approach_section::before {
             content: '';
             position: absolute;
-            left: 0;
-            width: 100%;
-            height: 100px;
-            background: #f9f9f9;
-            transform: skewY(-3deg);
+            top: 20%;
+            left: -10%;
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(45deg, rgba(147, 51, 234, 0.06), transparent);
+            transform: rotate(45deg);
+            z-index: 1;
         }
         
-        .stats-section::before {
-            top: -50px;
-            transform-origin: top left;
+        .approach_section::after {
+            content: '';
+            position: absolute;
+            bottom: 10%;
+            right: -5%;
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(-135deg, rgba(34, 197, 94, 0.05), transparent);
+            border-radius: 30%;
+            z-index: 1;
         }
         
-        .stats-section::after {
-            bottom: -50px;
-            transform-origin: bottom left;
+        .approach_section .container {
+            position: relative;
+            z-index: 2;
         }
         
-        .counter-grid {
+        /* Initial states for approach section - scroll triggered */
+        .approach_section .section_header {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .approach_images {
+            opacity: 0;
+            transform: translateX(-60px) scale(0.9);
+            transition: all 0.8s ease-out;
+        }
+        
+        .approach_text {
+            opacity: 0;
+            transform: translateX(60px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .book_placeholder {
+            opacity: 0;
+            transform: scale(0.8) rotateY(15deg);
+            transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .arrow_container {
+            opacity: 0;
+            transform: translateY(30px) scale(0.8);
+            transition: all 0.6s ease-out;
+        }
+        
+        .book_link {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .approach_text h3 {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+            position: relative;
+        }
+        
+        .approach_text p {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        
+        /* Animated states when in view */
+        .approach_section.animate-in .section_header {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .approach_section.animate-in .approach_images {
+            opacity: 1;
+            transform: translateX(0) scale(1);
+            transition-delay: 0.2s;
+        }
+        
+        .approach_section.animate-in .approach_text {
+            opacity: 1;
+            transform: translateX(0);
+            transition-delay: 0.2s;
+        }
+        
+        .approach_section.animate-in .book_placeholder {
+            opacity: 1;
+            transform: scale(1) rotateY(0deg);
+            transition-delay: 0.4s;
+        }
+        
+        .approach_section.animate-in .arrow_container {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            transition-delay: 0.6s;
+        }
+        
+        .approach_section.animate-in .book_link {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.7s;
+        }
+        
+        .approach_section.animate-in .approach_text h3:nth-of-type(1) {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.4s;
+        }
+        
+        .approach_section.animate-in .approach_text h3:nth-of-type(2) {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.6s;
+        }
+        
+        .approach_section.animate-in .approach_text p:nth-of-type(1) {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.5s;
+        }
+        
+        .approach_section.animate-in .approach_text p:nth-of-type(2) {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.7s;
+        }
+        
+        .approach_content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+            margin-top: 40px;
+        }
+        
+        .approach_images {
             display: flex;
-            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
+            padding-top: 30px;
+        }
+        
+        .book_placeholder {
+            width: 250px;
+            height: 350px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border: 2px solid #dee2e6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color: #666;
+            text-align: center;
+            border-radius: 12px;
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+        
+        .book_placeholder::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 103, 218, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .book_placeholder:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0, 103, 218, 0.15);
+            border-color: #0067DA;
+        }
+        
+        .book_placeholder:hover::before {
+            left: 100%;
+        }
+        
+        .arrow_container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 10px 0;
+            position: relative;
+        }
+        
+        .arrow {
+            font-size: 24px;
+            color: #0067DA;
+            transform: rotate(-45deg);
+            transition: all 0.3s ease;
+            animation: arrowBounce 2s ease-in-out infinite;
+        }
+        
+        .arrow:hover {
+            transform: rotate(-45deg) scale(1.2);
+            color: #004a99;
+        }
+        
+        .arrow_text {
+            font-size: 14px;
+            color: #0067DA;
+            font-weight: 500;
+            font-style: italic;
+        }
+        
+        .book_link {
+            color: #0067DA;
+            text-decoration: underline;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .book_link:hover {
+            color: #004a99;
+        }
+        
+        .approach_text {
+            padding-top: 20px;
+        }
+        
+        .approach_text h3 {
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+        
+        .approach_text p {
+            margin-bottom: 25px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .packages_button {
+            margin-top: 40px;
             text-align: center;
         }
         
-        .counter-item h3 {
+        /* Statistics Section */
+        .stats_section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #e8f2ff 0%, #f4f8ff 50%, #e0efff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stats_section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="%230067DA" opacity="0.1"/></svg>');
+            background-size: 50px 50px;
+            animation: float 6s ease-in-out infinite;
+            z-index: 1;
+        }
+        
+        .stats_section::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            left: 5%;
+            width: 350px;
+            height: 350px;
+            background: linear-gradient(45deg, rgba(251, 191, 36, 0.1), rgba(252, 211, 77, 0.03), transparent);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .stats_section::after {
+            content: '';
+            position: absolute;
+            bottom: -15%;
+            right: 10%;
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(-45deg, rgba(0, 103, 218, 0.08), transparent);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .stats_section .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .stats_grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .stats_section .section_header {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        .stat_item {
+            opacity: 0;
+        }
+        
+        .stat_item:nth-child(1) { animation: fadeInUp 0.6s ease-out 0.2s forwards; }
+        .stat_item:nth-child(2) { animation: fadeInUp 0.6s ease-out 0.3s forwards; }
+        .stat_item:nth-child(3) { animation: fadeInUp 0.6s ease-out 0.4s forwards; }
+        .stat_item:nth-child(4) { animation: fadeInUp 0.6s ease-out 0.5s forwards; }
+        
+        .stat_item {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #ffffff 0%, #fafbff 100%);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            border: 1px solid rgba(0, 103, 218, 0.1);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat_item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 103, 218, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .stat_item:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 50px rgba(0, 103, 218, 0.2);
+        }
+        
+        .stat_item:hover::before {
+            left: 100%;
+        }
+        
+        .stat_number {
             font-size: 48px;
+            font-weight: 700;
+            background: linear-gradient(45deg, #0067DA, #00a8ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin-bottom: 10px;
+            display: block;
+            position: relative;
+        }
+        
+        .stat_label {
+            font-size: 16px;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        /* Testimonials Section */
+        .testimonials_section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #0a1428 0%, #1a2f5e 25%, #2d3f75 50%, #1e2a5e 75%, #0f1429 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonials_section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(0, 103, 218, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.08) 0%, transparent 70%);
+            animation: backgroundFloat 8s ease-in-out infinite;
+            z-index: 1;
+        }
+        
+        .testimonials_section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1.5" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+            opacity: 0.3;
+            animation: dotPattern 15s linear infinite;
+            z-index: 2;
+        }
+        
+        .testimonials_section .container {
+            position: relative;
+            z-index: 3;
+        }
+        
+        .testimonials_section .section_header {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        .testimonials_section .section_title {
+            color: #ffffff;
+            background: linear-gradient(45deg, #ffffff, #e0e0ff, #ffffff);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: textShimmer 4s ease-in-out infinite;
+        }
+        
+        .testimonial_container {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out 0.2s forwards;
+        }
+        
+        .testimonial_nav {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out 0.4s forwards;
+        }
+        
+        .testimonial_container {
+            position: relative;
+            margin-top: 40px;
+            min-height: 200px;
+        }
+        
+        .testimonial_content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 60px;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        
+        .testimonial_content.active {
+            opacity: 1;
+        }
+        
+        .testimonial_image {
+            width: 220px;
+            height: 220px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 64px;
+            color: rgba(255, 255, 255, 0.8);
+            margin: 0 auto;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+        
+        .testimonial_image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .testimonial_image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        .testimonial_image:hover::before {
+            left: 100%;
+        }
+        
+        .testimonial_text {
+            padding-left: 20px;
+        }
+        
+        .testimonial_quote {
+            font-size: 18px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 25px;
+            font-style: italic;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .testimonial_quote::before {
+            content: '"';
+            position: absolute;
+            left: 0;
+            top: -10px;
+            font-size: 48px;
+            color: rgba(255, 255, 255, 0.3);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        
+        .testimonial_author {
+            font-weight: 600;
+            color: #ffffff;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .testimonial_role {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+        }
+        
+        .testimonial_nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 60px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .nav_arrow {
+            background: #0067DA;
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav_arrow:hover {
+            background: #004a99;
+            transform: translateY(-2px);
+        }
+        
+        .nav_arrow:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .testimonial_dots {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ddd;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .dot.active {
+            background: #0067DA;
         }
         
         /* Footer */
@@ -320,6 +1184,35 @@
             background-color: #222222;
             color: #999999;
             padding: 60px 0 20px;
+        }
+        
+        .footer_content {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        .footer_content > div:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+        
+        .footer_content > div:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        
+        .footer_content > div:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+        
+        .footer_bottom {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out 0.4s forwards;
+        }
+        
+        .footer_content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
         }
         
         .footer h3 {
@@ -333,327 +1226,734 @@
             margin-bottom: 10px;
         }
         
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        
-        .footer-bottom {
+        .footer_bottom {
             text-align: center;
             padding-top: 40px;
             border-top: 1px solid #333333;
         }
         
-        /* Newsletter */
-        .newsletter-section {
-            background-color: #222222;
-            color: white;
-            padding: 60px 0;
+        /* Animations */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         
-        .newsletter-form {
-            display: flex;
-            max-width: 500px;
-            margin: 20px auto 0;
-            gap: 10px;
+        @keyframes fadeInRight {
+            0% {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
         
-        .newsletter-form input {
-            flex: 1;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 25px;
+        @keyframes fadeInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes scaleIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes slideInFromBottom {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideInFromLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInFromRight {
+            0% {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes shimmer {
+            0%, 100% { transform: translateX(-100%) skewX(-15deg); }
+            50% { transform: translateX(100%) skewX(-15deg); }
+        }
+        
+        @keyframes slide {
+            0% { left: -100%; }
+            50% { left: 100%; }
+            100% { left: -100%; }
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @keyframes textShimmer {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes arrowBounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: rotate(-45deg) translateY(0) translateX(0);
+            }
+            40% {
+                transform: rotate(-45deg) translateY(-3px) translateX(3px);
+            }
+            60% {
+                transform: rotate(-45deg) translateY(-2px) translateX(2px);
+            }
+        }
+        
+        @keyframes backgroundFloat {
+            0%, 100% {
+                transform: translateY(0px) translateX(0px);
+            }
+            25% {
+                transform: translateY(-10px) translateX(5px);
+            }
+            50% {
+                transform: translateY(-5px) translateX(-8px);
+            }
+            75% {
+                transform: translateY(8px) translateX(3px);
+            }
+        }
+        
+        @keyframes dotPattern {
+            0% {
+                transform: translateX(0) translateY(0);
+            }
+            100% {
+                transform: translateX(-20px) translateY(-20px);
+            }
         }
         
         /* Responsive */
         @media (max-width: 768px) {
-            .elementor-col-50, .elementor-col-25 {
+            .hero_section {
+                background-image: none;
+                background-size: cover;
+                background-position: center;
+                background-attachment: scroll;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 100px 20px 40px 20px;
+                position: relative;
+            }
+            
+            .hero_section::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-image: url('Images 3/Suchit main.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                transform: none;
+                z-index: -1;
+            }
+            
+            .hero_section .container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: auto;
+                padding: 0;
                 width: 100%;
             }
             
-            .service-item {
-                flex: 0 0 100%;
+            .hero_content {
+                position: static;
+                transform: none;
+                max-width: 400px;
+                text-align: center;
+                width: 100%;
+                left: auto;
+                top: auto;
+                right: auto;
+                padding: 60px 20px 30px 20px;
+                background: rgba(0, 0, 0, 0.4);
+                border-radius: 15px;
+                margin: 300px auto 0 auto;
+                backdrop-filter: blur(5px);
             }
             
-            .footer-grid {
+            .hero_title {
+                font-size: 32px;
+            }
+            
+            .nav_menu {
+                display: none;
+            }
+            
+            .mobile_menu_toggle {
+                display: flex;
+            }
+            
+            .hero_buttons {
+                justify-content: center;
+            }
+            
+            .approach_content {
                 grid-template-columns: 1fr;
+                gap: 40px;
             }
             
-            h1 {
-                font-size: 28px;
+            .approach_images {
+                order: 2;
             }
             
-            .newsletter-form {
-                flex-direction: column;
+            .approach_text {
+                order: 1;
+                text-align: center;
+            }
+            
+            .stats_grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .testimonial_content {
+                position: absolute !important;
+                top: 0;
+                left: 0;
+                width: 100%;
+                display: block !important;
+                text-align: center;
+                padding: 20px;
+                opacity: 0;
+                transition: opacity 0.5s ease-in-out;
+            }
+            
+            .testimonial_content.active {
+                opacity: 1;
+            }
+            
+            .testimonial_text {
+                padding-left: 0;
+                margin-top: 20px;
+            }
+            
+            .testimonial_container {
+                min-height: 350px !important;
+                position: relative;
+                margin-bottom: 20px;
+            }
+            
+            .testimonial_image {
+                margin: 0 auto 20px auto;
+                width: 120px !important;
+                height: 120px !important;
+                font-size: 30px !important;
+            }
+            
+            .testimonial_quote {
+                font-size: 16px !important;
+                padding-left: 20px !important;
+            }
+            
+            .testimonial_quote::before {
+                font-size: 32px !important;
             }
         }
     </style>
 </head>
-
-<body class="home page-template-default page page-id-1737 woocommerce-js tg_menu_transparent tg_lightbox_black leftalign tg_footer_reveal elementor-default elementor-kit-3076 elementor-page elementor-page-1737">
-
-<div id="perspective">
-    <div id="wrapper" class="hasbg transparent">
+<body>
+    <!-- Header -->
+    <header class="header_wrapper">
+        <div class="container">
+            <div class="header_content">
+                <div class="logo">
+                    <a href="index.html" style="display: flex; align-items: center; gap: 0px; color: inherit; padding-left: 0px;">
+                        <img src="revel-logo.gif" alt="Revel Mentorship Logo">
+                        Revel Mentorship
+                    </a>
+                </div>
+                <nav>
+                    <ul class="nav_menu">
+                        <li><a href="about.html">About Me / Projects</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Book Consultation</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile_menu_toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
         
-        <!-- Header -->
-        <div id="elementor_header" class="header_style_wrapper visible">
-            <div class="elementor elementor-110">
-                <section class="elementor-section elementor-top-section">
-                    <div class="elementor-container">
-                        <div class="elementor-row">
-                            <!-- Logo -->
-                            <div class="elementor-column elementor-col-50">
-                                <div style="text-align: center; padding: 20px 0;">
-                                    <a href="#home">
-                                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 174'><text x='10' y='100' font-family='Jost, sans-serif' font-size='40' font-weight='bold' fill='%23222'>Suchit Ligade</text></svg>" alt="Suchit Ligade" style="max-height: 50px;">
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- Navigation would go here for full version -->
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-
-        <!-- Page Caption -->
-        <div id="page_caption" style="height: 600px; background-color: #ffffff; padding: 60px 0; margin-bottom: 45px;">
-            <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; text-align: center;">
-                <h1 style="font-size: 45px; color: #222222;">Suchit Ligade</h1>
-            </div>
-        </div>
-
-        <!-- Main Content -->
-        <div id="page_content_wrapper">
-            <div class="inner">
-                <div class="inner_wrapper">
-                    <div class="sidebar_content full_width">
-                        
-                        <!-- Hero Section -->
-                        <section class="hero-section elementor-section-stretched">
-                            <div class="elementor-shape elementor-shape-bottom">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-                                    <path class="elementor-shape-fill" d="M0,6V0h1000v100L0,6z"></path>
-                                </svg>
-                            </div>
-                            <div class="elementor-container">
-                                <div class="elementor-row">
-                                    <div class="elementor-column elementor-col-50">
-                                        <div style="padding: 40px 0;">
-                                            <span class="animated-fast" style="display: block; font-size: 18px; margin-bottom: 20px; color: white;">Want to advance, but stuck in the same place?</span>
-                                            <h1 class="animated-fast" style="font-size: 45px; margin-bottom: 20px; color: white;">
-                                                Bringing You a <strong>positive</strong> and <strong>awakening</strong> <strong>perspective</strong> on your 
-                                                <br><span style="color: #0067DA;">potentials</span>
-                                            </h1>
-                                            <p style="font-size: 20px; margin-bottom: 30px; color: white;">You're in the right place!</p>
-                                            <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-                                                <a href="#connect" class="button elementor-animation-shrink">Connect with me</a>
-                                                <a href="#about" class="button ghost">
-                                                    <i class="fa fa-play-circle-o"></i> Learn More
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="elementor-column elementor-col-50">
-                                        <!-- Hero image is set as background -->
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Services Section -->
-                        <section class="services-section elementor-section-stretched">
-                            <div class="elementor-container">
-                                <div class="elementor-row">
-                                    <div class="elementor-column elementor-col-100">
-                                        <div style="text-align: center; margin-bottom: 60px;">
-                                            <span class="animated-fast" style="font-size: 13px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; color: #666; display: block; margin-bottom: 10px;">Ready for Change?</span>
-                                            <h2 class="animated-fast" style="font-size: 30px; margin-bottom: 20px;">Break Free from Limitations</h2>
-                                            <p class="animated-fast" style="max-width: 800px; margin: 0 auto;">Are you feeling stuck in the same place, despite your desire to grow and move forward? Do you have big dreams and goals but find yourself facing obstacles that hold you back? If you're unwilling to settle for less and ready to break free from limitations, it's time to take the next step toward achieving your full potential.</p>
-                                            <br>
-                                            <p class="animated-fast" style="max-width: 800px; margin: 0 auto;">Whether it's in your personal life, career, or business, staying in the same place can be frustrating and demotivating. Growth requires change, and change requires action. That's where we come in. Our expert guidance and tailored solutions are designed to help you identify what's holding you back and create a clear, actionable path forward.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="service-grid">
-                                    <div class="service-item animated-fast">
-                                        <img src="Images 3/About Me - main image.jpg" alt="Professional Coaching">
-                                        <a href="#connect" class="button">Connect with me</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- CTA Section -->
-                        <section class="cta-section elementor-section-stretched">
-                            <div class="elementor-container">
-                                <div class="elementor-row">
-                                    <div class="elementor-column elementor-col-100">
-                                        <div style="text-align: center;">
-                                            <span class="animated-fast" style="display: block; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; opacity: 0.8;">Ready to Take Action?</span>
-                                            <h2 class="animated-fast" style="font-size: 30px; margin-bottom: 20px;">Let's Connect</h2>
-                                            <p class="animated-fast" style="max-width: 600px; margin: 0 auto 30px; opacity: 0.9;">Don't let another day pass feeling stuck in the same place. Take the first step toward breaking free from limitations and achieving your full potential. Our personalized approach ensures that you get the guidance and support you need to create lasting change.</p>
-                                            <a href="#connect" class="button">Connect with me</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Stats Section -->
-                        <section class="stats-section elementor-section-stretched">
-                            <div class="elementor-container">
-                                <div class="counter-grid">
-                                    <div class="counter-item animated-fast">
-                                        <h3>500+</h3>
-                                        <p>Happy Clients</p>
-                                    </div>
-                                    <div class="counter-item animated-fast">
-                                        <h3>120</h3>
-                                        <p>Online Courses</p>
-                                    </div>
-                                    <div class="counter-item animated-fast">
-                                        <h3>100%</h3>
-                                        <p>Satisfaction</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer -->
-        <div id="footer_wrapper">
-            <!-- Newsletter Section -->
-            <section class="newsletter-section">
-                <div class="elementor-container">
-                    <div class="elementor-row">
-                        <div class="elementor-column elementor-col-50">
-                            <h3 style="color: #ffffff; margin-bottom: 10px;">Sign up for our newsletter</h3>
-                            <span style="color: #cccccc;">Stay in the know on new free e-book</span>
-                        </div>
-                        <div class="elementor-column elementor-col-50">
-                            <form class="newsletter-form">
-                                <input type="email" placeholder="Your email address" required>
-                                <button type="submit" class="button">Subscribe</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Footer -->
-            <footer class="footer">
-                <div class="elementor-container">
-                    <div style="text-align: center; margin-bottom: 40px;">
-                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 174'><text x='10' y='100' font-family='Jost, sans-serif' font-size='40' font-weight='bold' fill='%23fff'>Suchit Ligade</text></svg>" alt="Suchit Ligade" style="max-height: 50px;">
-                    </div>
-                    
-                    <div class="footer-grid">
-                        <div>
-                            <h3>Address</h3>
-                            <a href="mailto:contact@suchitligade.com">contact@suchitligade.com</a>
-                            <p>Professional Consulting Services<br>Available Worldwide</p>
-                            <a href="#contact">Get in Touch</a>
-                        </div>
-                        
-                        <div>
-                            <h3>Explore</h3>
-                            <a href="#home">Home</a>
-                            <a href="#about">About Me</a>
-                            <a href="#services">Services</a>
-                            <a href="#connect">Connect</a>
-                        </div>
-                        
-                        <div>
-                            <h3>Services</h3>
-                            <a href="#consulting">Professional Consulting</a>
-                            <a href="#coaching">Personal Coaching</a>
-                            <a href="#growth">Growth Strategy</a>
-                            <a href="#breakthrough">Breakthrough Sessions</a>
-                        </div>
-                        
-                        <div>
-                            <h3>Get Connect</h3>
-                            <p>Ready to break free from limitations and achieve your full potential?</p>
-                            <div style="display: flex; gap: 10px; margin-top: 20px;">
-                                <a href="#" style="width: 40px; height: 40px; background-color: #0067DA; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;"><i class="fa fa-facebook"></i></a>
-                                <a href="#" style="width: 40px; height: 40px; background-color: #0067DA; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;"><i class="fa fa-twitter"></i></a>
-                                <a href="#" style="width: 40px; height: 40px; background-color: #0067DA; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;"><i class="fa fa-linkedin"></i></a>
-                                <a href="#" style="width: 40px; height: 40px; background-color: #0067DA; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;"><i class="fa fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="footer-bottom">
-                        <p>© Copyright Suchit Ligade Portfolio. All rights reserved.</p>
-                    </div>
-                </div>
-            </footer>
-        </div>
+    </header>
+    
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile_nav_overlay" id="mobileNavOverlay"></div>
+    
+    <!-- Mobile Navigation -->
+    <div class="mobile_nav" id="mobileNav">
+        <ul>
+            <li><a href="about.html">About Me / Projects</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="contact.html">Book Consultation</a></li>
+        </ul>
     </div>
-</div>
 
-<!-- Scripts -->
-<script>
-    // Smooth scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+    <!-- Hero Section -->
+    <section id="home" class="hero_section">
+        <div class="container">
+            <div class="hero_content">
+                <div class="hero_text">
+                    <div class="hero_name">Hi, I am Suchit Ligade</div>
+                    <h1 class="hero_title">
+                        Unlock Your <strong>Potential</strong><br>
+                        as a <strong>Product Manager</strong><br>
+                        with <strong>Expert Guidance</strong><br>
+                        and <span class="highlight">Proven Results</span>
+                    </h1>
+                    <div class="hero_buttons">
+                        <a href="contact.html" class="button primary">Schedule Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="middle" class="about_section">
+        <div class="container">
+            <div class="section_header">
+                <div class="section_subtitle">Want to advance, but stuck in the same place? Unwilling to settle?</div>
+                <h2 class="section_title">You're in the right place!</h2>
+                <div class="section_description" style="margin-bottom: 40px;">
+                    <p style="margin-bottom: 25px;">Are you feeling stuck in the same place, despite your desire to grow and move forward? Do you have big dreams and goals but find yourself facing obstacles that hold you back? If you're unwilling to settle for less and ready to break free from limitations, it's time to take the next step toward achieving your full potential.</p>
+                    
+                    <p style="margin-bottom: 30px;">Whether it's in your personal life, career, or business, staying in the same place can be frustrating and demotivating. Growth requires change, and change requires action. That's where we come in. Our expert guidance and tailored solutions are designed to help you identify what's holding you back and create a clear, actionable path forward.</p>
+                </div>
+                <a href="contact.html" class="button primary" style="margin-top: 20px;">Connect with me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Approach Section -->
+    <section id="approach" class="approach_section">
+        <div class="container">
+            <div class="section_header">
+                <h2 class="section_title">My Approach</h2>
+            </div>
+            
+            <div class="approach_content">
+                <div class="approach_images">
+                    <div class="book_placeholder">
+                        Placeholder for Book
+                    </div>
+                    <div class="arrow_container">
+                        <span class="arrow">↗</span>
+                        <span class="arrow_text">Check out the book I wrote</span>
+                    </div>
+                    <a href="#" class="book_link">View Book Details</a>
+                </div>
+                
+                <div class="approach_text">
+                    <h3>Personalized Mentorship</h3>
+                    <p>Every aspiring product manager has a unique background and goals. I provide tailored guidance that leverages your existing skills while addressing your specific growth areas. From engineering to business backgrounds, I help you find your authentic voice in the Product world.</p>
+                    
+                    <h3>Real-World Experience</h3>
+                    <p>Drawing from my journey from Engineer to Amazon Technical PM, I share practical insights from Zero-To-One product development, startup environments, and scaling products. You'll learn not just theory, but actionable strategies that work in today's competitive market.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="stats" class="stats_section">
+        <div class="container">
+            <div class="stats_grid">
+                <div class="stat_item">
+                    <span class="stat_number" data-target="10" data-suffix="+">1+</span>
+                    <div class="stat_label">Years<br>Experience</div>
+                </div>
+                
+                <div class="stat_item">
+                    <span class="stat_number" data-target="50" data-suffix="+">1+</span>
+                    <div class="stat_label">Mentees<br>Guided</div>
+                </div>
+                
+                <div class="stat_item">
+                    <span class="stat_number" data-target="20" data-suffix="+">1+</span>
+                    <div class="stat_label">Zero-to-One<br>Products</div>
+                </div>
+                
+                <div class="stat_item">
+                    <span class="stat_number" data-target="1" data-suffix="">1</span>
+                    <div class="stat_label">Book Published</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials_section">
+        <div class="container">
+            <div class="section_header">
+                <h2 class="section_title">What Clients Say About Me</h2>
+            </div>
+            
+            <div class="testimonial_container">
+                <!-- Testimonial 1 -->
+                <div class="testimonial_content active" data-testimonial="0">
+                    <div class="testimonial_image">×</div>
+                    
+                    <div class="testimonial_text">
+                        <div class="testimonial_quote">
+                            "Suchit's mentorship was instrumental in my transition from engineering to product management. His real-world experience at Amazon and practical approach to Zero-to-One products gave me the confidence and skills I needed to land my first PM role. He didn't just teach theory—he shared actionable strategies that actually work."
+                        </div>
+                        <div class="testimonial_author">Sarah Chen</div>
+                        <div class="testimonial_role">Product Manager, Tech Startup</div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial_content" data-testimonial="1">
+                    <div class="testimonial_image">×</div>
+                    
+                    <div class="testimonial_text">
+                        <div class="testimonial_quote">
+                            "Working with Suchit completely transformed my product thinking. Coming from a business background, I was struggling to understand the technical aspects of product management. His structured approach and real examples from his Amazon experience helped me bridge that gap. Within 3 months of our sessions, I landed a PM role at a fintech company. Highly recommend!"
+                        </div>
+                        <div class="testimonial_author">Michael Rodriguez</div>
+                        <div class="testimonial_role">Senior Product Manager, Fintech</div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial_content" data-testimonial="2">
+                    <div class="testimonial_image">×</div>
+                    
+                    <div class="testimonial_text">
+                        <div class="testimonial_quote">
+                            "As someone who was stuck in a mid-level PM role for years, Suchit's guidance was exactly what I needed to break through to senior level. His insights on product strategy, stakeholder management, and building influence within organizations are invaluable. The way he breaks down complex product challenges into actionable steps is remarkable. I'm now a Principal PM thanks to his mentorship."
+                        </div>
+                        <div class="testimonial_author">Priya Patel</div>
+                        <div class="testimonial_role">Principal Product Manager, SaaS Company</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation -->
+            <div class="testimonial_nav">
+                <button class="nav_arrow" id="prevBtn" onclick="changeTestimonial(-1)">‹</button>
+                <div class="testimonial_dots">
+                    <span class="dot active" onclick="currentTestimonial(1)"></span>
+                    <span class="dot" onclick="currentTestimonial(2)"></span>
+                    <span class="dot" onclick="currentTestimonial(3)"></span>
+                </div>
+                <button class="nav_arrow" id="nextBtn" onclick="changeTestimonial(1)">›</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer_content">
+                <div>
+                    <h3>Contact</h3>
+                    <a href="mailto:contact@suchitligade.com">contact@suchitligade.com</a>
+                    <p>Professional Consulting Services<br>Available Worldwide</p>
+                </div>
+                
+                <div>
+                    <h3>Services</h3>
+                    <a href="#consulting">Professional Consulting</a>
+                    <a href="#coaching">Personal Coaching</a>
+                    <a href="#growth">Growth Strategy</a>
+                    <a href="#breakthrough">Breakthrough Sessions</a>
+                </div>
+                
+                <div>
+                    <h3>Connect</h3>
+                    <p>Ready to break free from limitations and achieve your full potential?</p>
+                    <div style="margin-top: 20px;">
+                        <a href="#" style="display: inline-block; margin-right: 10px; width: 40px; height: 40px; background-color: #0067DA; border-radius: 50%; text-align: center; line-height: 40px; color: white;">f</a>
+                        <a href="#" style="display: inline-block; margin-right: 10px; width: 40px; height: 40px; background-color: #0067DA; border-radius: 50%; text-align: center; line-height: 40px; color: white;">t</a>
+                        <a href="#" style="display: inline-block; margin-right: 10px; width: 40px; height: 40px; background-color: #0067DA; border-radius: 50%; text-align: center; line-height: 40px; color: white;">in</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer_bottom">
+                <p>© Copyright Suchit Ligade Portfolio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for smooth scrolling and testimonials -->
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header_wrapper');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+        
+        // Number counter animation function
+        function animateCounter(element, target, duration = 3000) {
+            const suffix = element.getAttribute('data-suffix') || '';
+            const start = 1;
+            const startTime = performance.now();
+            
+            function updateCounter(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                
+                // Easing function for smooth animation - using easeOutQuart for more gradual slowdown
+                const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+                const current = Math.max(start, Math.floor(start + (easeOutQuart * (target - start))));
+                
+                element.textContent = current + suffix;
+                
+                if (progress < 1) {
+                    requestAnimationFrame(updateCounter);
+                }
+            }
+            
+            requestAnimationFrame(updateCounter);
+        }
+        
+        // Function to trigger section animations
+        function triggerSectionAnimation(section) {
+            // Handle statistics section counter animations
+            if (section.classList.contains('stats_section') && !section.hasAttribute('data-animated')) {
+                // Mark section as animated to prevent multiple triggers
+                section.setAttribute('data-animated', 'true');
+                
+                const statNumbers = section.querySelectorAll('.stat_number');
+                statNumbers.forEach((statElement, index) => {
+                    const target = parseInt(statElement.getAttribute('data-target'));
+                    setTimeout(() => {
+                        animateCounter(statElement, target);
+                    }, index * 200); // Stagger the counter animations
+                });
+            }
+            
+            const elements = section.querySelectorAll('[style*="opacity: 0"], .stat_item, .approach_images, .approach_text, .book_placeholder, .arrow_container, .book_link');
+            elements.forEach((el, index) => {
+                setTimeout(() => {
+                    el.style.animationPlayState = 'running';
+                }, index * 50);
+            });
+        }
+        
+        // Observe sections for scroll animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.about_section, .approach_section, .stats_section, .testimonials_section, .footer');
+            
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+            
+            // Custom observer for sections
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        triggerSectionAnimation(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.2,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            sections.forEach(section => {
+                sectionObserver.observe(section);
+            });
+        });
+
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const mobileNav = document.getElementById('mobileNav');
+            const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+            
+            if (mobileMenuToggle && mobileNav && mobileNavOverlay) {
+                // Toggle mobile menu
+                mobileMenuToggle.addEventListener('click', function() {
+                    mobileMenuToggle.classList.toggle('active');
+                    mobileNav.classList.toggle('active');
+                    mobileNavOverlay.classList.toggle('active');
+                    
+                    // Prevent body scroll when menu is open
+                    if (mobileNav.classList.contains('active')) {
+                        document.body.style.overflow = 'hidden';
+                    } else {
+                        document.body.style.overflow = '';
+                    }
+                });
+                
+                // Close mobile menu when clicking overlay
+                mobileNavOverlay.addEventListener('click', function() {
+                    mobileMenuToggle.classList.remove('active');
+                    mobileNav.classList.remove('active');
+                    mobileNavOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+                
+                // Close mobile menu when clicking on a link
+                const mobileNavLinks = mobileNav.querySelectorAll('a');
+                mobileNavLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenuToggle.classList.remove('active');
+                        mobileNav.classList.remove('active');
+                        mobileNavOverlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    });
                 });
             }
         });
-    });
 
-    // Newsletter form
-    document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const email = this.querySelector('input[type="email"]').value;
-        if (email) {
-            alert('Thank you for subscribing! We\'ll keep you updated with our latest content.');
-            this.querySelector('input[type="email"]').value = '';
+        // Testimonials functionality
+        let currentTestimonialIndex = 0;
+        const testimonials = document.querySelectorAll('.testimonial_content');
+        const dots = document.querySelectorAll('.dot');
+        const totalTestimonials = testimonials.length;
+
+        function showTestimonial(index) {
+            // Hide all testimonials
+            testimonials.forEach(testimonial => {
+                testimonial.classList.remove('active');
+            });
+            
+            // Remove active class from all dots
+            dots.forEach(dot => {
+                dot.classList.remove('active');
+            });
+            
+            // Show current testimonial
+            testimonials[index].classList.add('active');
+            dots[index].classList.add('active');
         }
-    });
 
-    // Header scroll effect
-    window.addEventListener('scroll', function() {
-        const header = document.querySelector('.header_style_wrapper');
-        if (window.scrollY > 100) {
-            header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-            header.style.backdropFilter = 'blur(10px)';
-        } else {
-            header.style.backgroundColor = '#ffffff';
-        }
-    });
-
-    // Animation observer
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+        function changeTestimonial(direction) {
+            currentTestimonialIndex += direction;
+            
+            if (currentTestimonialIndex >= totalTestimonials) {
+                currentTestimonialIndex = 0;
+            } else if (currentTestimonialIndex < 0) {
+                currentTestimonialIndex = totalTestimonials - 1;
             }
+            
+            showTestimonial(currentTestimonialIndex);
+        }
+
+        function currentTestimonial(index) {
+            currentTestimonialIndex = index - 1;
+            showTestimonial(currentTestimonialIndex);
+        }
+
+        // Auto-rotate testimonials every 6 seconds
+        setInterval(() => {
+            changeTestimonial(1);
+        }, 6000);
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            showTestimonial(0);
         });
-    });
-
-    document.querySelectorAll('.animated-fast').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-        observer.observe(el);
-    });
-</script>
-
+    </script>
 </body>
 </html>

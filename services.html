@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Suchit Ligade | Professional Portfolio</title>
+    
+    <!-- DotLife Theme Inspired Styles -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Jost', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.7;
+            color: #222222;
+            background-color: #f9f9f9;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Jost', sans-serif;
+            font-weight: 700;
+            line-height: 1.7;
+            color: #222222;
+        }
+        
+        h1 { font-size: 34px; }
+        h2 { font-size: 30px; }
+        h3 { font-size: 26px; }
+        h4 { font-size: 24px; }
+        h5 { font-size: 22px; }
+        h6 { font-size: 20px; }
+        
+        a {
+            color: #222222;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: #0067DA;
+        }
+        
+        /* Header */
+        .header_wrapper {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #ffffff;
+            z-index: 1000;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .header_content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #222222;
+        }
+        
+        .nav_menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .nav_menu li a {
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav_menu li a.active {
+            color: #0067DA;
+        }
+        
+        /* Page Header */
+        .page_header {
+            background: linear-gradient(135deg, #0067DA 0%, #004a9f 100%);
+            color: white;
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+        
+        .page_title {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+        
+        .page_subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        /* Services Grid */
+        .services_section {
+            padding: 80px 0;
+            background-color: #ffffff;
+        }
+        
+        .services_grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .service_card {
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            padding: 40px 30px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service_card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,103,218,0.15);
+        }
+        
+        .service_card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #0067DA, #00a8ff);
+        }
+        
+        .service_icon {
+            font-size: 64px;
+            margin-bottom: 25px;
+            color: #0067DA;
+        }
+        
+        .service_card h3 {
+            margin-bottom: 20px;
+            color: #222222;
+        }
+        
+        .service_card p {
+            margin-bottom: 25px;
+            color: #666666;
+            line-height: 1.8;
+        }
+        
+        .service_features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+        
+        .service_features li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+            color: #555555;
+        }
+        
+        .service_features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #0067DA;
+            font-weight: bold;
+        }
+        
+        .button {
+            font-family: 'Jost', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 25px;
+            padding: 12px 30px;
+            display: inline-block;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid #0067DA;
+            background-color: #0067DA;
+            color: #ffffff;
+        }
+        
+        .button:hover {
+            background-color: #ffffff;
+            color: #0067DA;
+            transform: translateY(-2px);
+        }
+        
+        /* Process Section */
+        .process_section {
+            padding: 80px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .section_header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section_title {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .process_grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+        
+        .process_item {
+            text-align: center;
+            position: relative;
+        }
+        
+        .process_number {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #0067DA;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+        
+        /* CTA Section */
+        .cta_section {
+            background: linear-gradient(135deg, #0067DA 0%, #004a9f 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta_section h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .cta_section .button {
+            background-color: #ffffff;
+            color: #0067DA;
+            border-color: #ffffff;
+        }
+        
+        .cta_section .button:hover {
+            background-color: transparent;
+            color: #ffffff;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #222222;
+            color: #999999;
+            padding: 60px 0 20px;
+        }
+        
+        .footer_content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer h3 {
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        
+        .footer a {
+            color: #ffffff;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .footer_bottom {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid #333333;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .services_grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav_menu {
+                display: none;
+            }
+            
+            .page_title {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header_wrapper">
+        <div class="container">
+            <div class="header_content">
+                <div class="logo"><a href="index.html">Suchit Ligade</a></div>
+                <nav>
+                    <ul class="nav_menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html" class="active">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page_header">
+        <div class="container">
+            <h1 class="page_title">Services</h1>
+            <p class="page_subtitle">Comprehensive solutions to help you achieve your goals and unlock your potential</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services_section">
+        <div class="container">
+            <div class="services_grid">
+                <div class="service_card">
+                    <div class="service_icon">💼</div>
+                    <h3>Professional Consulting</h3>
+                    <p>Strategic guidance to overcome professional obstacles and accelerate your career growth with proven methodologies.</p>
+                    <ul class="service_features">
+                        <li>Strategic career planning</li>
+                        <li>Leadership development</li>
+                        <li>Performance optimization</li>
+                        <li>Professional networking</li>
+                    </ul>
+                    <a href="contact.html" class="button">Get Started</a>
+                </div>
+                
+                <div class="service_card">
+                    <div class="service_icon">🎯</div>
+                    <h3>Personal Coaching</h3>
+                    <p>One-on-one sessions focused on unlocking your potential and creating lasting personal transformation.</p>
+                    <ul class="service_features">
+                        <li>Personal goal setting</li>
+                        <li>Mindset transformation</li>
+                        <li>Life balance strategies</li>
+                        <li>Confidence building</li>
+                    </ul>
+                    <a href="contact.html" class="button">Get Started</a>
+                </div>
+                
+                <div class="service_card">
+                    <div class="service_icon">📈</div>
+                    <h3>Growth Strategy</h3>
+                    <p>Develop actionable plans to break through limitations and accelerate your personal and professional progress.</p>
+                    <ul class="service_features">
+                        <li>Growth planning & execution</li>
+                        <li>Opportunity identification</li>
+                        <li>Risk assessment & mitigation</li>
+                        <li>Success metrics & tracking</li>
+                    </ul>
+                    <a href="contact.html" class="button">Get Started</a>
+                </div>
+                
+                <div class="service_card">
+                    <div class="service_icon">⚡</div>
+                    <h3>Breakthrough Sessions</h3>
+                    <p>Intensive sessions designed to break through specific barriers and achieve immediate breakthroughs.</p>
+                    <ul class="service_features">
+                        <li>Barrier identification</li>
+                        <li>Breakthrough planning</li>
+                        <li>Implementation strategy</li>
+                        <li>Follow-up support</li>
+                    </ul>
+                    <a href="contact.html" class="button">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process_section">
+        <div class="container">
+            <div class="section_header">
+                <h2 class="section_title">How It Works</h2>
+                <p>A simple, proven process to help you achieve your goals</p>
+            </div>
+            
+            <div class="process_grid">
+                <div class="process_item">
+                    <div class="process_number">1</div>
+                    <h3>Discovery</h3>
+                    <p>We start by understanding your current situation, challenges, and goals to create a personalized roadmap.</p>
+                </div>
+                
+                <div class="process_item">
+                    <div class="process_number">2</div>
+                    <h3>Strategy</h3>
+                    <p>Together, we develop a comprehensive strategy that addresses your specific needs and objectives.</p>
+                </div>
+                
+                <div class="process_item">
+                    <div class="process_number">3</div>
+                    <h3>Implementation</h3>
+                    <p>We work together to implement the strategy with ongoing support and guidance throughout the process.</p>
+                </div>
+                
+                <div class="process_item">
+                    <div class="process_number">4</div>
+                    <h3>Results</h3>
+                    <p>Track progress, celebrate wins, and continuously optimize to ensure sustained success and growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta_section">
+        <div class="container">
+            <h2>Ready to Get Started?</h2>
+            <p style="margin-bottom: 30px; opacity: 0.9;">Don't let another day pass feeling stuck. Take the first step toward breaking free from limitations.</p>
+            <a href="contact.html" class="button">Contact Me Today</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_content">
+                <div>
+                    <h3>Contact</h3>
+                    <a href="mailto:contact@suchitligade.com">contact@suchitligade.com</a>
+                    <p>Professional Consulting Services<br>Available Worldwide</p>
+                </div>
+                
+                <div>
+                    <h3>Services</h3>
+                    <a href="services.html">Professional Consulting</a>
+                    <a href="services.html">Personal Coaching</a>
+                    <a href="services.html">Growth Strategy</a>
+                    <a href="services.html">Breakthrough Sessions</a>
+                </div>
+                
+                <div>
+                    <h3>Connect</h3>
+                    <p>Ready to break free from limitations and achieve your full potential?</p>
+                    <div style="margin-top: 20px;">
+                        <a href="#" style="display: inline-block; margin-right: 10px; width: 40px; height: 40px; background-color: #0067DA; border-radius: 50%; text-align: center; line-height: 40px; color: white;">f</a>
+                        <a href="#" style="display: inline-block; margin-right: 10px; width: 40px; height: 40px; background-color: #0067DA; border-radius: 50%; text-align: center; line-height: 40px; color: white;">t</a>
+                        <a href="#" style="display: inline-block; margin-right: 10px; width: 40px; height: 40px; background-color: #0067DA; border-radius: 50%; text-align: center; line-height: 40px; color: white;">in</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer_bottom">
+                <p>© Copyright Suchit Ligade Portfolio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header_wrapper');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.backgroundColor = '#ffffff';
+                header.style.backdropFilter = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
