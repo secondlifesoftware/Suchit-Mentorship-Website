@@ -21,7 +21,7 @@
             font-weight: 400;
             line-height: 1.7;
             color: #222222;
-            background-color: #f9f9f9;
+            background: linear-gradient(135deg, #E7DFD9 0%, #f5f2ee 100%);
         }
         
         h1, h2, h3, h4, h5, h6 {
@@ -39,12 +39,12 @@
         h6 { font-size: 20px; }
         
         a {
-            color: #222222;
+            color: #4F6570;
             text-decoration: none;
         }
         
         a:hover {
-            color: #0067DA;
+            color: #2C4757;
         }
         
         /* Header */
@@ -98,7 +98,7 @@
         }
         
         .header_wrapper.scrolled .logo {
-            color: #222222;
+            color: #2C4757;
         }
         
         .nav_menu {
@@ -114,11 +114,11 @@
         }
         
         .header_wrapper.scrolled .nav_menu li a {
-            color: #222222;
+            color: #2C4757;
         }
         
         .nav_menu li a:hover {
-            color: #0067DA;
+            color: #4F6570;
         }
         
         /* Mobile Menu */
@@ -178,7 +178,7 @@
             left: -350px;
             width: 350px;
             height: 100%;
-            background-color: #000000;
+            background: linear-gradient(135deg, #4F6570 0%, #2C4757 100%);
             z-index: 999;
             transition: left 0.3s ease;
             overflow-y: auto;
@@ -223,21 +223,22 @@
         }
         
         .mobile_nav a:hover {
-            color: #cccccc;
+            color: #E7DFD9;
             background-color: transparent;
         }
         
         /* Hero Section */
         .hero_section {
-            min-height: 100vh;
+            min-height: 90vh;
             display: flex;
             align-items: center;
             justify-content: flex-start;
             position: relative;
-            background-image: url('Images 3/Hero section image 1.png');
+            background-image: url('Images 3/optimized/hero-image.jpg');
             background-size: cover;
-            background-position: center;
+            background-position: center center;
             background-repeat: no-repeat;
+            background-attachment: fixed;
             padding-top: 100px;
             overflow: hidden;
         }
@@ -256,7 +257,7 @@
         
         .hero_content {
             position: absolute;
-            left: 120px;
+            left: 200px;
             top: 50%;
             transform: translateY(-50%);
             z-index: 2;
@@ -333,13 +334,13 @@
             text-decoration: none;
             transition: all 0.4s ease;
             cursor: pointer;
-            border: 2px solid #0067DA;
+            border: 2px solid #4F6570;
             position: relative;
             overflow: hidden;
         }
         
         .button.primary {
-            background-color: #0067DA;
+            background-color: #4F6570;
             color: #ffffff;
         }
         
@@ -355,9 +356,9 @@
         }
         
         .button.primary:hover {
-            background-color: rgba(0, 103, 218, 0.9);
+            background-color: rgba(79, 101, 112, 0.9);
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0, 103, 218, 0.3);
+            box-shadow: 0 8px 25px rgba(79, 101, 112, 0.3);
         }
         
         .button.primary:hover::before {
@@ -391,7 +392,7 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(0, 103, 218, 0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(79, 101, 112, 0.1) 0%, transparent 70%);
             animation: rotate 20s linear infinite;
             z-index: 1;
         }
@@ -481,6 +482,9 @@
         
         .about_section .section_subtitle {
             color: rgba(255, 255, 255, 0.8);
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.4;
         }
         
         .about_section .section_title {
@@ -492,15 +496,62 @@
         }
         
         .about_section .button.primary {
-            background-color: #0067DA;
+            background-color: #4F6570;
             color: #ffffff;
-            border-color: #0067DA;
+            border-color: #4F6570;
         }
         
         .about_section .button.primary:hover {
             background-color: #ffffff;
-            color: #0067DA;
+            color: #4F6570;
             border-color: #ffffff;
+        }
+        
+        /* About Section Content Layout */
+        .about_content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-top: 40px;
+        }
+        
+        .about_text {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .about_image {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .about_section.animate-in .about_text {
+            opacity: 1;
+            transform: translateX(0);
+            transition-delay: 0.2s;
+        }
+        
+        .about_section.animate-in .about_image {
+            opacity: 1;
+            transform: translateX(0);
+            transition-delay: 0.4s;
+        }
+        
+        .about_stock_image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s ease;
+        }
+        
+        .about_stock_image:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
         }
         
         .section_header {
@@ -558,18 +609,18 @@
             background: linear-gradient(135deg, #ffffff 0%, #fafbff 100%);
             border-radius: 10px;
             box-shadow: 0 5px 25px rgba(0,0,0,0.05);
-            border: 1px solid rgba(0, 103, 218, 0.05);
+            border: 1px solid rgba(79, 101, 112, 0.05);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
         .service_item:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 103, 218, 0.1);
+            box-shadow: 0 15px 40px rgba(79, 101, 112, 0.1);
         }
         
         .service_icon {
             font-size: 48px;
-            color: #0067DA;
+            color: #4F6570;
             margin-bottom: 20px;
         }
         
@@ -604,7 +655,7 @@
             right: -5%;
             width: 250px;
             height: 250px;
-            background: linear-gradient(-135deg, rgba(34, 197, 94, 0.05), transparent);
+            background: linear-gradient(-135deg, rgba(79, 101, 112, 0.05), transparent);
             border-radius: 30%;
             z-index: 1;
         }
@@ -743,8 +794,8 @@
         }
         
         .book_placeholder {
-            width: 250px;
-            height: 350px;
+            width: 240px;
+            height: 380px;
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
             border: 2px solid #dee2e6;
             display: flex;
@@ -767,14 +818,14 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 103, 218, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(231, 223, 217, 0.3), transparent);
             transition: left 0.6s ease;
         }
         
         .book_placeholder:hover {
             transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 15px 40px rgba(0, 103, 218, 0.15);
-            border-color: #0067DA;
+            box-shadow: 0 15px 40px rgba(44, 71, 87, 0.25);
+            border-color: #4F6570;
         }
         
         .book_placeholder:hover::before {
@@ -791,7 +842,7 @@
         
         .arrow {
             font-size: 24px;
-            color: #0067DA;
+            color: #4F6570;
             transform: rotate(-45deg);
             transition: all 0.3s ease;
             animation: arrowBounce 2s ease-in-out infinite;
@@ -799,25 +850,25 @@
         
         .arrow:hover {
             transform: rotate(-45deg) scale(1.2);
-            color: #004a99;
+            color: #2C4757;
         }
         
         .arrow_text {
             font-size: 14px;
-            color: #0067DA;
+            color: #4F6570;
             font-weight: 500;
             font-style: italic;
         }
         
         .book_link {
-            color: #0067DA;
+            color: #4F6570;
             text-decoration: underline;
             font-weight: 500;
             transition: color 0.3s ease;
         }
         
         .book_link:hover {
-            color: #004a99;
+            color: #2C4757;
         }
         
         .approach_text {
@@ -840,10 +891,37 @@
             text-align: center;
         }
         
+        /* Approach Stock Image */
+        .approach_stock_image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            transition: all 0.4s ease;
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        
+        .approach_section.animate-in .approach_stock_image {
+            opacity: 1;
+            transform: scale(1);
+            transition-delay: 0.2s;
+        }
+        
+        .approach_stock_image:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 60px rgba(79, 101, 112, 0.2);
+        }
+        
         /* Statistics Section */
         .stats_section {
             padding: 80px 0;
-            background: linear-gradient(135deg, #e8f2ff 0%, #f4f8ff 50%, #e0efff 100%);
+            background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             position: relative;
             overflow: hidden;
         }
@@ -855,33 +933,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="%230067DA" opacity="0.1"/></svg>');
-            background-size: 50px 50px;
-            animation: float 6s ease-in-out infinite;
-            z-index: 1;
-        }
-        
-        .stats_section::before {
-            content: '';
-            position: absolute;
-            top: -10%;
-            left: 5%;
-            width: 350px;
-            height: 350px;
-            background: linear-gradient(45deg, rgba(251, 191, 36, 0.1), rgba(252, 211, 77, 0.03), transparent);
-            border-radius: 50%;
-            z-index: 1;
-        }
-        
-        .stats_section::after {
-            content: '';
-            position: absolute;
-            bottom: -15%;
-            right: 10%;
-            width: 400px;
-            height: 400px;
-            background: linear-gradient(-45deg, rgba(0, 103, 218, 0.08), transparent);
-            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
             z-index: 1;
         }
         
@@ -913,11 +965,11 @@
         
         .stat_item {
             text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, #ffffff 0%, #fafbff 100%);
-            border-radius: 15px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-            border: 1px solid rgba(0, 103, 218, 0.1);
+            padding: 25px 12px;
+            background: rgba(255, 255, 255, 1.0);
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            border: 1px solid rgba(0, 0, 0, 0.1);
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
@@ -930,13 +982,13 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 103, 218, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(231, 223, 217, 0.3), transparent);
             transition: left 0.6s ease;
         }
         
         .stat_item:hover {
             transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 15px 50px rgba(0, 103, 218, 0.2);
+            box-shadow: 0 15px 50px rgba(44, 71, 87, 0.3);
         }
         
         .stat_item:hover::before {
@@ -944,27 +996,27 @@
         }
         
         .stat_number {
-            font-size: 48px;
+            font-size: 32px;
             font-weight: 700;
-            background: linear-gradient(45deg, #0067DA, #00a8ff);
+            background: linear-gradient(45deg, #4F6570, #2C4757);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin-bottom: 10px;
+            margin-bottom: 6px;
             display: block;
             position: relative;
         }
         
         .stat_label {
-            font-size: 16px;
-            color: #666;
+            font-size: 12px;
+            color: #555;
             font-weight: 500;
         }
         
         /* Testimonials Section */
         .testimonials_section {
             padding: 80px 0;
-            background: linear-gradient(135deg, #0a1428 0%, #1a2f5e 25%, #2d3f75 50%, #1e2a5e 75%, #0f1429 100%);
+            background: linear-gradient(135deg, #2C4757 0%, #4F6570 25%, rgba(79, 101, 112, 0.9) 50%, #2C4757 75%, #1a2833 100%);
             position: relative;
             overflow: hidden;
         }
@@ -977,9 +1029,9 @@
             right: 0;
             bottom: 0;
             background: 
-                radial-gradient(circle at 20% 30%, rgba(0, 103, 218, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.12) 0%, transparent 50%),
-                radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.08) 0%, transparent 70%);
+                radial-gradient(circle at 20% 30%, rgba(231, 223, 217, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(79, 101, 112, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(44, 71, 87, 0.05) 0%, transparent 70%);
             animation: backgroundFloat 8s ease-in-out infinite;
             z-index: 1;
         }
@@ -1053,7 +1105,7 @@
         .testimonial_image {
             width: 220px;
             height: 220px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #4F6570 0%, #2C4757 100%);
             border: 4px solid rgba(255, 255, 255, 0.2);
             display: flex;
             align-items: center;
@@ -1136,7 +1188,7 @@
         }
         
         .nav_arrow {
-            background: #0067DA;
+            background: #4F6570;
             color: white;
             border: none;
             width: 50px;
@@ -1151,7 +1203,7 @@
         }
         
         .nav_arrow:hover {
-            background: #004a99;
+            background: #2C4757;
             transform: translateY(-2px);
         }
         
@@ -1176,14 +1228,14 @@
         }
         
         .dot.active {
-            background: #0067DA;
+            background: #4F6570;
         }
         
         /* Footer */
         .footer {
-            background-color: #222222;
-            color: #999999;
-            padding: 60px 0 20px;
+            background-color: #2a2a2a;
+            color: #888;
+            padding: 30px 0 15px;
         }
         
         .footer_content {
@@ -1199,37 +1251,49 @@
             animation-delay: 0.2s;
         }
         
-        .footer_content > div:nth-child(3) {
-            animation-delay: 0.3s;
-        }
-        
         .footer_bottom {
             opacity: 0;
-            animation: fadeInUp 0.8s ease-out 0.4s forwards;
+            animation: fadeInUp 0.8s ease-out 0.3s forwards;
         }
         
         .footer_content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        
-        .footer h3 {
-            color: #ffffff;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
             margin-bottom: 20px;
         }
         
+        .footer h3 {
+            color: #cccccc;
+            margin-bottom: 12px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        
         .footer a {
-            color: #ffffff;
+            color: #aaa;
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 6px;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+        
+        .footer a:hover {
+            color: #4F6570;
+        }
+        
+        .footer p {
+            font-size: 14px;
+            line-height: 1.4;
+            margin-bottom: 6px;
         }
         
         .footer_bottom {
             text-align: center;
-            padding-top: 40px;
-            border-top: 1px solid #333333;
+            padding-top: 20px;
+            border-top: 1px solid #404040;
+            font-size: 12px;
+            color: #666;
         }
         
         /* Animations */
@@ -1389,13 +1453,30 @@
         }
         
         /* Responsive */
+        
+        /* Tablet styles */
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .hero_content {
+                left: 60px;
+                max-width: 500px;
+            }
+            
+            .hero_title {
+                font-size: 42px;
+            }
+            
+            .hero_name {
+                font-size: 13px;
+            }
+        }
+        
         @media (max-width: 768px) {
             .hero_section {
                 background-image: none;
                 background-size: cover;
                 background-position: center;
                 background-attachment: scroll;
-                min-height: 100vh;
+                min-height: 90vh;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -1410,7 +1491,7 @@
                 left: 0;
                 right: 0;
                 bottom: 0;
-                background-image: url('Images 3/Suchit main.png');
+                background-image: url('Images 3/optimized/mobile-hero.jpg');
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -1520,6 +1601,21 @@
             .testimonial_quote::before {
                 font-size: 32px !important;
             }
+            
+            /* About Section Responsive */
+            .about_content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+            
+            .about_text .section_header {
+                text-align: center;
+            }
+            
+            .about_stock_image {
+                height: 300px;
+            }
         }
     </style>
 </head>
@@ -1530,7 +1626,7 @@
             <div class="header_content">
                 <div class="logo">
                     <a href="index.html" style="display: flex; align-items: center; gap: 0px; color: inherit; padding-left: 0px;">
-                        <img src="revel-logo.gif" alt="Revel Mentorship Logo">
+                        <img src="Images 3/optimized/logo.gif" alt="Revel Mentorship Logo">
                         Revel Mentorship
                     </a>
                 </div>
@@ -1585,15 +1681,22 @@
 
     <section id="middle" class="about_section">
         <div class="container">
-            <div class="section_header">
-                <div class="section_subtitle">Want to advance, but stuck in the same place? Unwilling to settle?</div>
-                <h2 class="section_title">You're in the right place!</h2>
-                <div class="section_description" style="margin-bottom: 40px;">
-                    <p style="margin-bottom: 25px;">Are you feeling stuck in the same place, despite your desire to grow and move forward? Do you have big dreams and goals but find yourself facing obstacles that hold you back? If you're unwilling to settle for less and ready to break free from limitations, it's time to take the next step toward achieving your full potential.</p>
-                    
-                    <p style="margin-bottom: 30px;">Whether it's in your personal life, career, or business, staying in the same place can be frustrating and demotivating. Growth requires change, and change requires action. That's where we come in. Our expert guidance and tailored solutions are designed to help you identify what's holding you back and create a clear, actionable path forward.</p>
+            <div class="about_content">
+                <div class="about_text">
+                    <div class="section_header">
+                        <div class="section_subtitle">Want to advance, but stuck in the same place? Unwilling to settle?</div>
+                        <h2 class="section_title">You're in the right place!</h2>
+                        <div class="section_description" style="margin-bottom: 40px;">
+                            <p style="margin-bottom: 25px;">Are you feeling stuck in the same place, despite your desire to grow and move forward? Do you have big dreams and goals but find yourself facing obstacles that hold you back? If you're unwilling to settle for less and ready to break free from limitations, it's time to take the next step toward achieving your full potential.</p>
+                            
+                            <p style="margin-bottom: 30px;">Whether it's in your personal life, career, or business, staying in the same place can be frustrating and demotivating. Growth requires change, and change requires action. That's where we come in. Our expert guidance and tailored solutions are designed to help you identify what's holding you back and create a clear, actionable path forward.</p>
+                        </div>
+                        <a href="contact.html" class="button primary" style="margin-top: 20px;">Connect with me</a>
+                    </div>
                 </div>
-                <a href="contact.html" class="button primary" style="margin-top: 20px;">Connect with me</a>
+                <div class="about_image">
+                    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80" alt="Person standing on mountain peak overcoming challenges" class="about_stock_image">
+                </div>
             </div>
         </div>
     </section>
@@ -1608,13 +1711,13 @@
             <div class="approach_content">
                 <div class="approach_images">
                     <div class="book_placeholder">
-                        Placeholder for Book
+                        <img src="Images 3/optimized/book-cover.jpg" alt="Product Management Ebook" style="width: 100%; height: 100%; object-fit: contain; border-radius: 10px;">
                     </div>
                     <div class="arrow_container">
                         <span class="arrow">↗</span>
                         <span class="arrow_text">Check out the book I wrote</span>
                     </div>
-                    <a href="#" class="book_link">View Book Details</a>
+                    <a href="https://a.co/d/g71oakH" target="_blank" class="book_link">View Book Details</a>
                 </div>
                 
                 <div class="approach_text">
@@ -1665,7 +1768,9 @@
             <div class="testimonial_container">
                 <!-- Testimonial 1 -->
                 <div class="testimonial_content active" data-testimonial="0">
-                    <div class="testimonial_image">×</div>
+                    <div class="testimonial_image">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Sarah Chen" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                    </div>
                     
                     <div class="testimonial_text">
                         <div class="testimonial_quote">
@@ -1678,7 +1783,9 @@
                 
                 <!-- Testimonial 2 -->
                 <div class="testimonial_content" data-testimonial="1">
-                    <div class="testimonial_image">×</div>
+                    <div class="testimonial_image">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Michael Rodriguez" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                    </div>
                     
                     <div class="testimonial_text">
                         <div class="testimonial_quote">
@@ -1691,7 +1798,9 @@
                 
                 <!-- Testimonial 3 -->
                 <div class="testimonial_content" data-testimonial="2">
-                    <div class="testimonial_image">×</div>
+                    <div class="testimonial_image">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Priya Patel" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                    </div>
                     
                     <div class="testimonial_text">
                         <div class="testimonial_quote">
@@ -1723,24 +1832,16 @@
                 <div>
                     <h3>Contact</h3>
                     <a href="mailto:contact@suchitligade.com">contact@suchitligade.com</a>
-                    <p>Professional Consulting Services<br>Available Worldwide</p>
-                </div>
-                
-                <div>
-                    <h3>Services</h3>
-                    <a href="#consulting">Professional Consulting</a>
-                    <a href="#coaching">Personal Coaching</a>
-                    <a href="#growth">Growth Strategy</a>
-                    <a href="#breakthrough">Breakthrough Sessions</a>
+                    <p>Professional Product Management Mentorship</p>
                 </div>
                 
                 <div>
                     <h3>Connect</h3>
-                    <p>Ready to break free from limitations and achieve your full potential?</p>
-                    <div style="margin-top: 20px;">
-                        <a href="#" style="display: inline-block; margin-right: 10px; width: 40px; height: 40px; background-color: #0067DA; border-radius: 50%; text-align: center; line-height: 40px; color: white;">f</a>
-                        <a href="#" style="display: inline-block; margin-right: 10px; width: 40px; height: 40px; background-color: #0067DA; border-radius: 50%; text-align: center; line-height: 40px; color: white;">t</a>
-                        <a href="#" style="display: inline-block; margin-right: 10px; width: 40px; height: 40px; background-color: #0067DA; border-radius: 50%; text-align: center; line-height: 40px; color: white;">in</a>
+                    <p>Ready to unlock your potential as a Product Manager?</p>
+                    <div style="margin-top: 15px;">
+                        <a href="#" style="display: inline-block; margin-right: 8px; width: 32px; height: 32px; background-color: #4F6570; border-radius: 50%; text-align: center; line-height: 32px; color: white; font-size: 14px;">f</a>
+                        <a href="#" style="display: inline-block; margin-right: 8px; width: 32px; height: 32px; background-color: #4F6570; border-radius: 50%; text-align: center; line-height: 32px; color: white; font-size: 14px;">t</a>
+                        <a href="#" style="display: inline-block; margin-right: 8px; width: 32px; height: 32px; background-color: #4F6570; border-radius: 50%; text-align: center; line-height: 32px; color: white; font-size: 14px;">in</a>
                     </div>
                 </div>
             </div>

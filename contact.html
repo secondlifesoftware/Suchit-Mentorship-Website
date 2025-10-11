@@ -21,7 +21,7 @@
             font-weight: 400;
             line-height: 1.7;
             color: #222222;
-            background-color: #f9f9f9;
+            background: linear-gradient(135deg, #E7DFD9 0%, #f5f2ee 100%);
         }
         
         h1, h2, h3, h4, h5, h6 {
@@ -39,12 +39,12 @@
         h6 { font-size: 20px; }
         
         a {
-            color: #222222;
+            color: #4F6570;
             text-decoration: none;
         }
         
         a:hover {
-            color: #0067DA;
+            color: #2C4757;
         }
         
         /* Header */
@@ -113,13 +113,13 @@
         
         .nav_menu li a.active {
             color: #ffffff;
-            background: linear-gradient(135deg, #0067DA 0%, #0052b3 100%);
-            box-shadow: 0 4px 15px rgba(0, 103, 218, 0.3);
+            background: linear-gradient(135deg, #4F6570 0%, #2C4757 100%);
+            box-shadow: 0 4px 15px rgba(79, 101, 112, 0.3);
         }
         
         .nav_menu li a:hover:not(.active) {
-            background: rgba(0, 103, 218, 0.1);
-            color: #0067DA;
+            background: rgba(79, 101, 112, 0.1);
+            color: #4F6570;
         }
         
         /* Mobile Menu Toggle */
@@ -158,7 +158,7 @@
             left: -100%;
             width: 100%;
             height: 100vh;
-            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            background: linear-gradient(135deg, #4F6570 0%, #2C4757 100%);
             z-index: 999;
             display: flex;
             flex-direction: column;
@@ -190,14 +190,14 @@
         
         .mobile_menu ul li a:hover,
         .mobile_menu ul li a.active {
-            color: #60a5fa;
+            color: #E7DFD9;
             transform: scale(1.1);
         }
         
         /* Main Content */
         .main_content {
             padding: 120px 0 80px;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            background: linear-gradient(135deg, #E7DFD9 0%, rgba(231, 223, 217, 0.7) 100%);
             min-height: 100vh;
         }
         
@@ -249,11 +249,11 @@
         .package_item:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-            border-color: rgba(0, 103, 218, 0.3);
+            border-color: rgba(79, 101, 112, 0.3);
         }
         
         .package_item.popular {
-            border-color: #0067DA;
+            border-color: #4F6570;
             transform: scale(1.05);
         }
         
@@ -263,7 +263,7 @@
             top: -15px;
             left: 50%;
             transform: translateX(-50%);
-            background-color: #0067DA;
+            background-color: #4F6570;
             color: white;
             padding: 8px 20px;
             border-radius: 15px;
@@ -299,18 +299,18 @@
         
         .calendar {
             background: #ffffff;
-            border: 2px solid #0067DA;
+            border: 2px solid #4F6570;
             border-radius: 20px;
             padding: 30px;
             max-width: 450px;
             margin: 0 auto 40px;
-            box-shadow: 0 15px 40px rgba(0,103,218,0.15);
+            box-shadow: 0 15px 40px rgba(79, 101, 112, 0.15);
             transition: all 0.3s ease;
         }
         
         .calendar:hover {
             transform: translateY(-5px);
-            box-shadow: 0 25px 60px rgba(0,103,218,0.2);
+            box-shadow: 0 25px 60px rgba(79, 101, 112, 0.2);
         }
         
         .calendar_header {
@@ -362,11 +362,11 @@
         }
         
         .calendar_day:hover {
-            background-color: #e6f3ff;
+            background-color: rgba(231, 223, 217, 0.3);
         }
         
         .calendar_day.selected {
-            background-color: #0067DA;
+            background-color: #4F6570;
             color: white;
         }
         
@@ -391,8 +391,8 @@
             text-decoration: none;
             transition: all 0.4s ease;
             cursor: pointer;
-            border: 2px solid #0067DA;
-            background: linear-gradient(135deg, #0067DA 0%, #0052b3 100%);
+            border: 2px solid #4F6570;
+            background: linear-gradient(135deg, #4F6570 0%, #2C4757 100%);
             color: #ffffff;
             position: relative;
             overflow: hidden;
@@ -413,14 +413,90 @@
         
         .button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(0, 103, 218, 0.4);
-            background: linear-gradient(135deg, #0052b3 0%, #003d82 100%);
+            box-shadow: 0 15px 35px rgba(79, 101, 112, 0.4);
+            background: linear-gradient(135deg, #2C4757 0%, #1a2833 100%);
         }
         
         .button:hover::before {
             left: 100%;
         }
         
+        /* Footer */
+        .footer {
+            background-color: #2a2a2a;
+            color: #888;
+            padding: 30px 0 15px;
+        }
+        
+        .footer_content {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        .footer_content > div:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+        
+        .footer_content > div:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        
+        .footer_bottom {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out 0.3s forwards;
+        }
+        
+        .footer_content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .footer h3 {
+            color: #cccccc;
+            margin-bottom: 12px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        
+        .footer a {
+            color: #aaa;
+            display: block;
+            margin-bottom: 6px;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+        
+        .footer a:hover {
+            color: #4F6570;
+        }
+        
+        .footer p {
+            font-size: 14px;
+            line-height: 1.4;
+            margin-bottom: 6px;
+        }
+        
+        .footer_bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #404040;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
         
         /* Responsive */
         @media (max-width: 768px) {
@@ -454,7 +530,7 @@
             <div class="header_content">
                 <div class="logo">
                         <a href="index.html" style="display: flex; align-items: center; gap: 0px; padding-left: 0px;">
-                        <img src="revel-logo.gif" alt="Revel Mentorship Logo">
+                        <img src="Images 3/optimized/logo.gif" alt="Revel Mentorship Logo">
                         Revel Mentorship
                     </a>
                 </div>
@@ -574,20 +650,32 @@
         </div>
     </section>
 
-
-    <!-- Animations -->
-    <style>
-        @keyframes fadeInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_content">
+                <div>
+                    <h3>Contact</h3>
+                    <a href="mailto:contact@suchitligade.com">contact@suchitligade.com</a>
+                    <p>Professional Product Management Mentorship</p>
+                </div>
+                
+                <div>
+                    <h3>Connect</h3>
+                    <p>Ready to unlock your potential as a Product Manager?</p>
+                    <div style="margin-top: 15px;">
+                        <a href="#" style="display: inline-block; margin-right: 8px; width: 32px; height: 32px; background-color: #4F6570; border-radius: 50%; text-align: center; line-height: 32px; color: white; font-size: 14px;">f</a>
+                        <a href="#" style="display: inline-block; margin-right: 8px; width: 32px; height: 32px; background-color: #4F6570; border-radius: 50%; text-align: center; line-height: 32px; color: white; font-size: 14px;">t</a>
+                        <a href="#" style="display: inline-block; margin-right: 8px; width: 32px; height: 32px; background-color: #4F6570; border-radius: 50%; text-align: center; line-height: 32px; color: white; font-size: 14px;">in</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer_bottom">
+                <p>© Copyright Suchit Ligade Portfolio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
     <!-- JavaScript -->
     <script>

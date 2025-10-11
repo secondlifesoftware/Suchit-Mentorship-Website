@@ -1,0 +1,163 @@
+/*------------------------------------------------------------------
+[Custom Color Palette - Health & Wellness Inspired]
+
+Based on the calming, professional aesthetic with:
+- Sage greens for accent and primary elements
+- Warm beiges/taupes for backgrounds and secondary elements  
+- Soft whites and grays for content
+- Maintains accessibility and readability
+-------------------------------------------------------------------*/
+
+:root {
+  /* Primary Colors - Sage Green Palette */
+  --sage-green-primary: #7a8b7a;      /* Main sage green */
+  --sage-green-light: #a8b8a8;        /* Lighter sage for hover states */
+  --sage-green-dark: #5a6b5a;         /* Darker sage for emphasis */
+  --sage-green-muted: #8ea28e;        /* Muted sage for backgrounds */
+  
+  /* Secondary Colors - Warm Beiges & Taupes */
+  --beige-warm: #e8e3dd;              /* Warm beige background */
+  --beige-light: #f5f2ee;             /* Light beige for cards/sections */
+  --taupe-soft: #d4c4b0;              /* Soft taupe accent */
+  --taupe-medium: #b8a690;            /* Medium taupe for borders */
+  
+  /* Neutral Colors */
+  --cream-white: #faf8f5;             /* Warm cream white */
+  --off-white: #f8f6f3;              /* Off-white background */
+  --gray-soft: #6b6b6b;              /* Soft gray for text */
+  --gray-medium: #5a5a5a;            /* Medium gray for headings */
+  --gray-charcoal: #3a3a3a;          /* Charcoal for emphasis */
+  
+  /* Accent Colors */
+  --accent-gold: #d4af37;             /* Soft gold accent */
+  --accent-terracotta: #c89882;       /* Warm terracotta */
+}
+
+/* Apply the new color scheme */
+body {
+  background: var(--cream-white);
+  color: var(--gray-soft);
+}
+
+/* Headers and Navigation */
+h1, h2, h3, h4, h5, h6, h7 {
+  color: var(--gray-charcoal) !important;
+}
+
+/* Links */
+a {
+  color: var(--sage-green-primary) !important;
+}
+
+a:hover, a:active {
+  color: var(--sage-green-dark) !important;
+}
+
+/* Navigation Bar */
+.top_bar {
+  background: var(--off-white) !important;
+  border-bottom: 1px solid var(--taupe-medium) !important;
+}
+
+#menu_wrapper .nav ul li a, 
+#menu_wrapper div .nav li > a {
+  color: var(--gray-medium) !important;
+}
+
+#menu_wrapper .nav ul li a:hover, 
+#menu_wrapper div .nav li > a:hover {
+  color: var(--sage-green-primary) !important;
+}
+
+/* Current menu item */
+#menu_wrapper div .nav > li.current-menu-item > a, 
+#menu_wrapper div .nav > li.current-menu-parent > a, 
+#menu_wrapper div .nav > li.current-menu-ancestor > a {
+  color: var(--sage-green-primary) !important;
+}
+
+/* Buttons */
+.button, input[type="submit"], button {
+  background: var(--sage-green-primary) !important;
+  color: var(--cream-white) !important;
+  border: 1px solid var(--sage-green-primary) !important;
+}
+
+.button:hover, input[type="submit"]:hover, button:hover {
+  background: var(--sage-green-dark) !important;
+  border-color: var(--sage-green-dark) !important;
+}
+
+/* Cards and Content Sections */
+.post_wrapper, .sidebar, .widget {
+  background: var(--beige-light);
+  border: 1px solid var(--taupe-medium);
+}
+
+/* Footer */
+#footer {
+  background: var(--beige-warm) !important;
+}
+
+#footer a {
+  color: var(--gray-medium) !important;
+}
+
+/* Page Caption/Headers */
+#page_caption {
+  background: var(--beige-warm);
+  border-bottom: 1px solid var(--taupe-medium);
+}
+
+/* Post attributes and metadata */
+.post_attribute, .comment_date, .post-date {
+  color: var(--gray-soft) !important;
+}
+
+/* Sidebar widgets */
+h5.widgettitle {
+  color: var(--sage-green-primary) !important;
+  border-bottom: 1px solid var(--sage-green-primary) !important;
+}
+
+/* Borders and separators */
+hr, .themeborder {
+  border-color: var(--taupe-medium) !important;
+}
+
+/* Form inputs */
+input[type="text"], input[type="email"], input[type="url"], textarea {
+  background: var(--cream-white);
+  border: 1px solid var(--taupe-medium);
+  color: var(--gray-medium);
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, textarea:focus {
+  border-color: var(--sage-green-primary);
+}
+
+/* Blockquotes */
+blockquote {
+  background: var(--beige-light);
+  border-left: 4px solid var(--sage-green-primary);
+  color: var(--gray-charcoal) !important;
+  padding: 20px;
+}
+
+/* Social icons - subtle sage green theme */
+.social_wrapper.shortcode ul li.facebook a { background: var(--sage-green-primary) !important; }
+.social_wrapper.shortcode ul li.twitter a { background: var(--sage-green-light) !important; }
+.social_wrapper.shortcode ul li.linkedin a { background: var(--sage-green-dark) !important; }
+.social_wrapper.shortcode ul li.instagram a { background: var(--taupe-soft) !important; }
+
+/* Mobile menu */
+.mobile_menu_wrapper {
+  background: var(--gray-charcoal) !important;
+}
+
+/* Hover effects with sage green */
+#menu_wrapper .nav ul li a:before, 
+#menu_wrapper div .nav li > a:before,
+.post_attribute a:before {
+  background-color: var(--sage-green-muted) !important;
+}
