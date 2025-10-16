@@ -238,7 +238,7 @@
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
-            background-attachment: fixed;
+            background-attachment: scroll;
             padding-top: 100px;
             overflow: hidden;
         }
@@ -965,52 +965,56 @@
         
         .stat_item {
             text-align: center;
-            padding: 25px 12px;
-            background: rgba(255, 255, 255, 1.0);
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-            border: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 40px 20px;
             transition: all 0.4s ease;
             position: relative;
-            overflow: hidden;
+            overflow: visible;
         }
         
         .stat_item::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(231, 223, 217, 0.3), transparent);
-            transition: left 0.6s ease;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 50%, transparent 80%);
+            border-radius: 50%;
+            opacity: 0;
+            transition: all 0.4s ease;
+            z-index: -1;
         }
         
         .stat_item:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 15px 50px rgba(44, 71, 87, 0.3);
+            transform: translateY(-5px) scale(1.02);
         }
         
         .stat_item:hover::before {
-            left: 100%;
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1.2);
         }
         
         .stat_number {
-            font-size: 32px;
-            font-weight: 700;
-            background: linear-gradient(45deg, #4F6570, #2C4757);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 6px;
+            font-size: 60px;
+            font-weight: 900;
+            color: #ffffff;
+            margin-bottom: 15px;
             display: block;
             position: relative;
+            text-shadow: 
+                3px 3px 0px rgba(0, 0, 0, 1),
+                6px 6px 12px rgba(0, 0, 0, 0.8);
         }
         
         .stat_label {
-            font-size: 12px;
-            color: #555;
-            font-weight: 500;
+            font-size: 20px;
+            color: #ffffff;
+            font-weight: 700;
+            line-height: 1.4;
+            text-shadow: 
+                2px 2px 0px rgba(0, 0, 0, 1),
+                4px 4px 8px rgba(0, 0, 0, 0.8);
         }
         
         /* Testimonials Section */
@@ -1710,9 +1714,9 @@
             
             <div class="approach_content">
                 <div class="approach_images">
-                    <div class="book_placeholder">
+                    <a href="https://www.amazon.com/dp/B0DJBZ5CGW?ref=cm_sw_r_ffobk_cp_ud_dp_2B2JV2CKY25GQXNYYAZT&ref_=cm_sw_r_ffobk_cp_ud_dp_2B2JV2CKY25GQXNYYAZT&social_share=cm_sw_r_ffobk_cp_ud_dp_2B2JV2CKY25GQXNYYAZT&bestFormat=true" target="_blank" class="book_placeholder">
                         <img src="Images 3/optimized/book-cover.jpg" alt="Product Management Ebook" style="width: 100%; height: 100%; object-fit: contain; border-radius: 10px;">
-                    </div>
+                    </a>
                     <div class="arrow_container">
                         <span class="arrow">↗</span>
                         <span class="arrow_text">Check out the book I wrote</span>
@@ -1839,9 +1843,7 @@
                     <h3>Connect</h3>
                     <p>Ready to unlock your potential as a Product Manager?</p>
                     <div style="margin-top: 15px;">
-                        <a href="#" style="display: inline-block; margin-right: 8px; width: 32px; height: 32px; background-color: #4F6570; border-radius: 50%; text-align: center; line-height: 32px; color: white; font-size: 14px;">f</a>
-                        <a href="#" style="display: inline-block; margin-right: 8px; width: 32px; height: 32px; background-color: #4F6570; border-radius: 50%; text-align: center; line-height: 32px; color: white; font-size: 14px;">t</a>
-                        <a href="#" style="display: inline-block; margin-right: 8px; width: 32px; height: 32px; background-color: #4F6570; border-radius: 50%; text-align: center; line-height: 32px; color: white; font-size: 14px;">in</a>
+                        <a href="https://www.linkedin.com/in/suchitligade/" target="_blank" style="display: inline-block; width: 32px; height: 32px; background-color: #4F6570; border-radius: 50%; text-align: center; line-height: 32px; color: white; font-size: 14px;">in</a>
                     </div>
                 </div>
             </div>
