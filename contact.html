@@ -229,12 +229,12 @@
             border: 2px solid #e2e8f0;
             border-radius: 25px;
             padding: 40px 30px;
-            text-align: center;
+            text-align: left;
             position: relative;
-            min-height: 300px;
+            min-height: 400px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.8s ease-out;
@@ -274,13 +274,64 @@
         
         .package_title {
             font-size: 24px;
-            margin-bottom: 20px;
-            font-weight: 600;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-align: center;
+            color: #1a202c;
         }
         
         .package_description {
-            color: #666;
+            color: #4a5568;
+            line-height: 1.7;
+            font-size: 15px;
+        }
+        
+        .package_section_title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .package_list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 15px 0;
+        }
+        
+        .package_list li {
+            padding: 8px 0 8px 25px;
+            position: relative;
+            color: #4a5568;
+            font-size: 14px;
             line-height: 1.6;
+        }
+        
+        .package_list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4F6570;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        .package_ideal {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .package_ideal strong {
+            color: #2d3748;
+            font-weight: 600;
+        }
+        
+        .package_duration {
+            margin-top: 10px;
+            font-weight: 600;
+            color: #4F6570;
         }
         
         /* Calendar Section */
@@ -558,21 +609,75 @@
             <!-- Packages Section -->
             <div class="packages_section">
                 <div class="packages_grid">
+                    <!-- Package 1: Find Your Path -->
                     <div class="package_item">
-                        <h3 class="package_title">Basic Package</h3>
-                        <p class="package_description">Perfect for getting started with your product management journey. Includes initial consultation and guidance.</p>
+                        <h3 class="package_title">Find Your Path</h3>
+                        
+                        <div class="package_section_title">What's Included</div>
+                        <ul class="package_list">
+                            <li><strong>Discover your Superpowers:</strong> Identify 1-2 unique strengths that make you irreplaceable as a PM</li>
+                            <li><strong>Career Strategy Sessions:</strong> Assess your goals, define milestones, and create your personalized PM transition roadmap</li>
+                            <li><strong>Resume Transformation:</strong> Line-by-line resume optimization with PM-specific keywords and industry best practices (2 revision rounds included)</li>
+                            <li><strong>Job Search Strategy:</strong> Customized job search timeline, company research templates, and networking strategies</li>
+                        </ul>
+                        
+                        <div class="package_ideal">
+                            <p><strong>Ideal For:</strong> Professionals exploring a transition into product management or early in their PM journey who need clarity and direction.</p>
+                            <p class="package_duration">Duration: 3-4 sessions over 4-6 weeks</p>
+                        </div>
                     </div>
                     
+                    <!-- Package 2: Nail The Interview -->
                     <div class="package_item popular">
-                        <h3 class="package_title">Most Popular</h3>
-                        <p class="package_description">Our most comprehensive package including ongoing mentorship, strategic guidance, and career planning support.</p>
+                        <h3 class="package_title">Nail The Interview</h3>
+                        
+                        <div class="package_section_title">What's Included</div>
+                        <ul class="package_list">
+                            <li><strong>Behavioral Interview Prep:</strong> Practice mock interview sessions with STAR method, detailed feedback, and improvement recommendations</li>
+                            <li><strong>Product Case Study Simulation:</strong> Develop your "Product Sense" through real-world case practice</li>
+                            <li><strong>Interview Confidence Building:</strong> Techniques to overcome nervousness and present your best self</li>
+                            <li><strong>Interview Question Bank:</strong> Curated PM interview questions and preparation materials</li>
+                            <li><strong>Resume Review:</strong> Quick optimization to ensure your resume matches interview performance</li>
+                            <li><strong>Technical PM & Market Sizing:</strong> Optional advanced session for technical PM roles</li>
+                        </ul>
+                        
+                        <div class="package_ideal">
+                            <p><strong>Ideal For:</strong> Aspiring PMs actively interviewing or preparing to apply who need to ace behavioral, product, and technical interviews.</p>
+                            <p class="package_duration">Duration: 4-5 sessions over 4-5 weeks</p>
+                        </div>
                     </div>
                     
+                    <!-- Package 3: Accelerate in your Career -->
                     <div class="package_item">
-                        <h3 class="package_title">Professional</h3>
-                        <p class="package_description">Advanced coaching for experienced professionals looking to transition or advance in product management roles.</p>
+                        <h3 class="package_title">Accelerate in your Career</h3>
+                        
+                        <div class="package_section_title">What's Included</div>
+                        <p class="package_description" style="margin-bottom: 10px;">Ongoing mentorship with accountability for professionals serious about breaking into or advancing in PM</p>
+                        <p class="package_description" style="margin-bottom: 10px; font-weight: 600;">Everything from Career Clarity and Interview Mastery Package</p>
+                        <p class="package_description" style="margin-bottom: 10px; font-weight: 600;">Plus on-going accountability:</p>
+                        <ul class="package_list">
+                            <li>Bi-weekly progress check-ins (6 sessions)</li>
+                            <li>Milestone reviews and strategy adjustments</li>
+                            <li>Weekly action plans with accountability tracking</li>
+                            <li>Networking guidance and follow-up strategies</li>
+                            <li>Offer negotiation support when you land interviews</li>
+                            <li>Email/message support between sessions</li>
+                        </ul>
+                        
+                        <div class="package_ideal">
+                            <p><strong>Ideal For:</strong> Serious career changers who want comprehensive support, structured accountability, and a proven system to land a PM role within 90 days, or Newly joined PMs who want to accelerate in your career.</p>
+                            <p class="package_duration">Duration: 12-15 sessions over 8-12 weeks</p>
+                        </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- Discovery Session Section -->
+            <div class="discovery_section" style="text-align: center; margin-bottom: 60px; padding: 60px 40px; background: linear-gradient(135deg, #4F6570 0%, #2C4757 100%); border-radius: 25px; color: white;">
+                <h2 style="color: white; font-size: 2.5rem; margin-bottom: 20px;">Let's Talk: Free 60-minute Discovery Session</h2>
+                <p style="font-size: 1.2rem; color: rgba(255, 255, 255, 0.95); max-width: 700px; margin: 0 auto 20px; line-height: 1.7;">Thinking about a career in product management but not sure where to start? Or maybe you're already applying but not getting the results you want?</p>
+                <p style="font-size: 1.3rem; font-weight: 600; color: white; margin-bottom: 10px;">Let's have a conversation!</p>
+                <p style="font-size: 1.1rem; color: rgba(255, 255, 255, 0.9); font-style: italic;">Zero commitment. Just genuine guidance.</p>
             </div>
 
             <!-- Calendly Widget -->
@@ -591,14 +696,14 @@
             <div class="footer_content">
                 <div>
                     <h3>Contact</h3>
-                    <a href="mailto:contact@suchitligade.com">contact@suchitligade.com</a>
+                    <a href="mailto:suchit.ligade@gmail.com">suchit.ligade@gmail.com</a>
                     <p>Professional Product Management Mentorship</p>
                 </div>
                 
-                <div>
+                <div style="text-align: right;">
                     <h3>Connect</h3>
                     <p>Ready to unlock your potential as a Product Manager?</p>
-                    <div style="margin-top: 15px;">
+                    <div style="margin-top: 15px; display: flex; justify-content: flex-end;">
                         <a href="https://www.linkedin.com/in/suchitligade/" target="_blank" style="display: inline-block; width: 32px; height: 32px; background-color: #4F6570; border-radius: 50%; text-align: center; line-height: 32px; color: white; font-size: 14px;">in</a>
                     </div>
                 </div>
@@ -606,6 +711,10 @@
             
             <div class="footer_bottom">
                 <p>© Copyright Suchit Ligade Portfolio. All rights reserved.</p>
+                <div style="margin-top: 25px; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 20px; background: rgba(255, 255, 255, 0.05); border-radius: 10px; max-width: 450px; margin-left: auto; margin-right: auto;">
+                    <span style="font-size: 16px; color: #aaa; font-weight: 500; letter-spacing: 0.5px;">Powered by Second Life Software</span>
+                    <img src="Images 3/SecondLifeSoftware.png" alt="Second Life Software" style="height: 30px; opacity: 1;">
+                </div>
             </div>
         </div>
     </footer>
